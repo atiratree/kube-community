@@ -20,6 +20,18 @@ usergroups:
       - "Sujay Pillai"
       - TaoBeier
 
+  - name: contribex-leads
+    long_name: SIG Contributor Experience Leads
+    description: SIG Contributor Experience Leads group.
+    channels:
+      - sig-contribex
+    members:
+      - kaslin
+      - MadhavJivrajani
+      - mfahlandt
+      - palnabarun
+      - Priyankasaggu11929
+
   - name: contributor-comms
     long_name: Contributor Communications
     description: Contributor Communications group.
@@ -38,6 +50,19 @@ usergroups:
       - sandipanpanda
       - sreeram-venkitesh
 
+  - name: k8s-infra-leads
+    long_name: SIG K8S Infra leads
+    description: |-
+      Leads of the Infrastructure SIG. Ping for a community-owned infrastructure problem.
+    channels:
+      - k8s-infra-alerts
+      - sig-k8s-infra
+    members:
+      - ameukam
+      - genpage
+      - hakman
+      - upodroid
+      - xmudrii
 
   # Should match the membership of the following teams at all times:
   # - https://git.k8s.io/security/#product-security-committee-psc
@@ -52,14 +77,17 @@ usergroups:
       - release-management
       - sig-release
     members:
+      - puerco
       - cjcullen
       - cji
       - enj
       - joelsmith
       - micahhausler
+      - natherz97
       - ritazh
       - SaranBalaji90
       - tabbysable
+      - Vyom-Yadav
 
   - name: velero-maintainers
     long_name: Velero Maintainers
@@ -86,6 +114,8 @@ usergroups:
       - pnbrown
       - CIPHERTron
       - chadmcrowell
+      - hii-arpit
+      - kaslin
 
   - name: zoom-admins
     long_name: Zoom Admins
@@ -93,12 +123,9 @@ usergroups:
     channels:
       - sig-contribex
     members:
-      - alejandrox1
-      - castrojo
-      - idealhack
-      - mrbobbytables
-      - nzoueidi
-      - onlydole
+      - chadmcrowell
+      - chrisshort
+      - palnabarun
       - paris
       - pnbrown
 
@@ -190,9 +217,9 @@ usergroups:
     members:
       - aojea
       - bentheelder
-      - justaugustus
+      - katcosgrove
       - pacoxu
-      - pohly
+      - ritazh
       - saschagrunert
       - soltysh
 
@@ -240,46 +267,38 @@ usergroups:
     long_name: Cluster API Release Team
     description: Members of the Cluster API Release Team
     members:
-      - AttyXY
-      - blind3dd
-      - cahillsf
+      - adilGhaffarDev
+      - alimaazamat
       - chandankumar4
+      - chiukapoor
       - cprivitere
       - hackeramitkumar
       - mboersma
       - mbrow137
-      - pratik-mahalle
-      - ramessesii2
+      - natitomattis
+      - neoaggelos
       - RansherSingh
-      - serngawy
       - shecodesmagic
-      - sreeram-venkitesh
-      - Sunnatillo
-      - wendy-ha18
+      - swastik959
+      - tsuzu
 
   - name: kcp-devs
     long_name: kcp Development Team
     description: Active developers of kcp on #kcp-dev
     members:
-      - csams
-      - davidfestal
-      - hardys
-      - jmprusi
-      - kylape
-      - ncdc
-      - nrb
-      - p0lyn0mial
-      - pweil-
-      - s-urbaniak
-      - stevekuznetsov
+      - clubanderson
+      - embik
+      - mjudeikis
+      - scheeles
       - sttts
-      - vincepri
+      - xrstf
 
   - name: github-admins
     long_name: Kubernetes GitHub Admins
     description: Administrators of the Kubernetes GitHub organisations
     members:
       - cblecker
+      - jasonbraganza
       - MadhavJivrajani
       - mrbobbytables
       - nikhita
@@ -326,3 +345,12 @@ usergroups:
       - kayrus
       - mandre
       - pierreprinetti
+
+  - name: kubetail-maintainers
+    long_name: kubetail Maintainers
+    description: kubetail Maintainers group of kubetail.com
+    channels:
+      - kubetail
+    members:
+      - amorey
+      - rxinui

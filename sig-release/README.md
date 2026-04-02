@@ -14,10 +14,7 @@ The [charter](charter.md) defines the scope and governance of the Release Specia
 
 ## Meetings
 *Joining the [mailing list](https://groups.google.com/forum/#!forum/kubernetes-sig-release) for the group will typically add invites for the following meetings to your calendar.*
-* Regular SIG Meeting APAC/EU Oriented Time: [Tuesdays at 14:30 UTC](https://zoom.us/j/327142148?pwd=RE9aZWtCc0hhOWs4ZTdXZ0hBM0ROdz09) (biweekly). [Convert to your timezone](http://www.thetimezoneconverter.com/?t=14%3A30&tz=UTC).
-  * [Meeting notes and Agenda](https://bit.ly/k8s-sig-release-meeting).
-  * [Meeting recordings](https://bit.ly/k8s-sig-release-videos).
-* Regular SIG Meeting US Oriented Time: [Tuesdays at 17:00 UTC](https://zoom.us/j/327142148?pwd=RE9aZWtCc0hhOWs4ZTdXZ0hBM0ROdz09) (biweekly). [Convert to your timezone](http://www.thetimezoneconverter.com/?t=17%3A00&tz=UTC).
+* Regular SIG Meeting: [Thursdays at 14:30 UTC](https://zoom.us/j/91794653597?pwd=eFJUOVErQ1dFZ3cvODVNbUNJZFlvZz09) (biweekly). [Convert to your timezone](http://www.thetimezoneconverter.com/?t=14%3A30&tz=UTC).
   * [Meeting notes and Agenda](https://bit.ly/k8s-sig-release-meeting).
   * [Meeting recordings](https://bit.ly/k8s-sig-release-videos).
 
@@ -36,7 +33,7 @@ subprojects, and resolve cross-subproject technical issues and decisions.
 
 * Verónica López (**[@Verolop](https://github.com/Verolop)**), AuthZed
 * Carlos Tadeu Panato Jr. (**[@cpanato](https://github.com/cpanato)**), Chainguard, Inc
-* Adolfo García Veytia (**[@puerco](https://github.com/puerco)**), Stacklok
+* Adolfo García Veytia (**[@puerco](https://github.com/puerco)**), Carabiner Systems, Inc
 
 ## Emeritus Leads
 
@@ -55,7 +52,7 @@ subprojects, and resolve cross-subproject technical issues and decisions.
     - [@kubernetes/sig-release](https://github.com/orgs/kubernetes/teams/sig-release) - SIG Release Members
     - [@kubernetes/sig-release-admins](https://github.com/orgs/kubernetes/teams/sig-release-admins) - Admins for SIG Release repositories
     - [@kubernetes/sig-release-leads](https://github.com/orgs/kubernetes/teams/sig-release-leads) - Chairs, Technical Leads, and Program Managers for SIG Release
-- Steering Committee Liaison: Sascha Grunert (**[@saschagrunert](https://github.com/saschagrunert)**)
+- Steering Committee Liaison: Rita Zhang (**[@ritazh](https://github.com/ritazh)**)
 
 ## Working Groups
 
@@ -107,9 +104,10 @@ The Release Engineering subproject is responsible for the [process/procedures](h
 The Kubernetes Release Team is responsible for the day-to-day work required to successfully create releases of Kubernetes.
 - **Leads:**
   - Grace Nguyen (**[@gracenng](https://github.com/gracenng)**), Notion
-  - Kat Cosgrove (**[@katcosgrove](https://github.com/katcosgrove)**), Independent
+  - Kat Cosgrove (**[@katcosgrove](https://github.com/katcosgrove)**), Minimus
 - **Owners:**
   - [kubernetes-sigs/release-team-shadow-stats](https://github.com/kubernetes-sigs/release-team-shadow-stats/blob/main/OWNERS)
+  - [kubernetes-sigs/signalhound](https://github.com/kubernetes-sigs/signalhound/blob/main/OWNERS)
   - [kubernetes/sig-release/release-team](https://github.com/kubernetes/sig-release/blob/master/release-team/OWNERS)
 - **Contact:**
   - [Mailing List](https://groups.google.com/a/kubernetes.io/g/release-team)

@@ -27,6 +27,7 @@ An introduction to using resources with kubectl can be found in [the object mana
   - [Categories](#categories)
 - [Idempotency](#idempotency)
 - [Optional vs. Required](#optional-vs-required)
+- [Nullable](#nullable)
 - [Defaulting](#defaulting)
   - [Static Defaults](#static-defaults)
   - [Admission Controlled Defaults](#admission-controlled-defaults)
@@ -579,11 +580,13 @@ selectors, annotations, data), as opposed to sets of subobjects.
 
 #### Primitive types
 
+Also read the section on validation, below.
+
+When selecting fields, consider the following:
 * Look at similar fields in the API (e.g. ports, durations) and follow the
   conventions of existing fields.
-* Do not use enums. Use aliases for string instead (e.g. `NodeConditionType`).
-* All numeric fields should be bounds-checked, both for too-small or negative
-  and for too-large.
+* Do not use numeric enums. Use aliases for string instead (e.g.
+  `NodeConditionType`).
 * All public integer fields MUST use the Go `int32` or Go `int64` types, not
   `int` (which is ambiguously sized, depending on target platform).  Internal
   types may use `int`.
@@ -822,50 +825,112 @@ indicated in the Retry-After header, if it is present).
 
 Fields must be either optional or required.
 
+A field that is required means that the writer must express an opinion about the value of the field.
+Required fields are always present, and readers can rely on the field being present in the object.
+
+An optional field is one where the writer may choose to omit the field entirely.
+Readers should not assume that the field is present, unless the field also has a server-side default value.
+
+Default values can only be set on optional fields.
+
 Optional fields have the following properties:
 
 - They have the `+optional` comment tag in Go.
 - They are a pointer type in the Go definition (e.g. `AwesomeFlag *SomeFlag`) or
 have a built-in `nil` value (e.g. maps and slices).
+- They are marked with the `omitempty` json struct tag in the Go definition.
 - The API server should allow POSTing and PUTing a resource with this field
 unset.
 
-In most cases, optional fields should also have the `omitempty` struct tag (the
-`omitempty` option specifies that the field should be omitted from the json
-encoding if the field has an empty value). However, If you want to have
-different logic for an optional field which is not provided vs. provided with
-empty values, do not use `omitempty` (e.g. https://github.com/kubernetes/kubernetes/issues/34641).
+When the field type has a built-in `nil` value, such as a map or a slice, and
+your use case means that you need to be able to distinguish between
+"field not set" and "field set to an empty value", you should use a pointer to
+the type, even though it has a built-in `nil` value.
+See https://github.com/kubernetes/kubernetes/issues/34641.
 
 Note that for backward compatibility, any field that has the `omitempty` struct
-tag will be considered to be optional, but this may change in the future and
-having the `+optional` comment tag is highly recommended.
+tag, and is not explicitly marked as `+required`, will be considered to be optional.
+This is expected to change in the future, and new fields should explicitly set either
+an `+optional` or `+required` comment tag.
 
-Required fields have the opposite properties, namely:
+Required fields have the following properties:
 
 - They do not have an `+optional` comment tag.
-- They do not have an `omitempty` struct tag.
-- They are not a pointer type in the Go definition (e.g. `AnotherFlag SomeFlag`).
+- They mark themselves as required explicitly with a `+required` comment tag.
 - The API server should not allow POSTing or PUTing a resource with this field
 unset.
+- They _typically_ do not use pointer types in the Go definition (e.g. `AnotherFlag SomeFlag`), though required fields where the zero value is a valid value must use pointer types, paired with an `omitempty` struct tag to avoid spurious null serializations.
+
+For more details on how to use pointers and `omitempty` with fields, see [Serialization of optional/required fields](#serialization-of-optionalrequired-fields).
 
 Using the `+optional` or the `omitempty` tag causes OpenAPI documentation to
 reflect that the field is optional.
 
+### Serialization of optional/required fields
+
 Using a pointer allows distinguishing unset from the zero value for that type.
-There are some cases where, in principle, a pointer is not needed for an
-optional field since the zero value is forbidden, and thus implies unset. There
-are examples of this in the codebase. However:
+There are some cases where, in principle, a pointer is not needed for a
+field since the zero value is forbidden, and thus implies unset.
+There are examples of this in the codebase. However:
 
-- it can be difficult for implementors to anticipate all cases where an empty
-value might need to be distinguished from a zero value
-- structs are not omitted from encoder output even where omitempty is specified,
-which is messy;
-- having a pointer consistently imply optional is clearer for users of the Go
-language client, and any other clients that use corresponding types
+- It can be difficult for implementors to anticipate all cases where an empty
+value might need to be distinguished from a zero value.
+- Structs are not omitted from encoder output even where `omitempty` is specified,
+which is messy.
 
-Therefore, we ask that pointers always be used with optional fields that do not
-have a built-in `nil` value.
+To determine whether a field should be a pointer, consider the following:
 
+```mermaid
+graph TD;
+    A[Start] --> B{Is the zero value a valid user choice?};
+    B -- Yes --> C[Use a pointer and omitempty];
+    B -- No --> D{Is the field optional or required?};
+    D -- Optional --> E["Does the field type have a built-in nil value (map or slice)?"];
+    E -- Yes --> F[Do not use a pointer, use omitempty];
+    E -- No --> C;
+    D -- Required --> F
+```
+There are several implications of the above:
+- For lists and maps where the zero valid is a valid user choice, this means that `[]` and `{}` have a semantically different meaning than unset, in this case it is appropriate to use `*[]T` or `*map[T]S` respectively.
+- For `bool` types, the zero value is `false`, which is always a valid user choice. `bool` types should always be pointers, and should always use the `omitempty` tag.
+- When a field is required, and the zero value is not valid, a structured client who has not expressed an explicit choice will have their request rejected by the API server based on the invalid value, rather than the field being unset.
+  - For example, a string with a minimum length of 1; Validation would not understand if the field was unset, or set to the empty string deliberately, but would still reject the request because it did not meet the length requirements.
+  - Technically, using a pointer in these cases is also acceptable, but not advised as it makes coding more complex, and increases the risk of nil pointer exceptions.
+  - In these cases, not using `omitempty` provides the same result, but pollutes the marshaled object with zero values and is not recommended.
+- For structs, the zero value can only be valid when the struct has no required fields, and does not require at least one property to be set.
+  - Required structs should use `omitzero` to avoid marshalling the zero value.
+
+#### Serialization of custom resources
+
+When custom resources are admitted by the API server, openapi validation is applied to the object _prior_ to any structured client observing the object.
+
+For a field where the zero value is not valid, the openapi validation will reject the object if the field is present and set to the zero value,
+before a controller or validation webhook could observe the field.
+
+This means that there is no need to distinguish in a custom resource, between unset and the zero value for fields where the zero value is not valid.
+In these cases, pointers are not needed, as the zero value indicates to the structured client that the field is unset.
+
+This can be beneficial to API authors, as it reduces the complexity of the API, and reduces the risk of nil pointer exceptions in controllers.
+
+## Nullable
+
+The `+nullable` comment tag allows the json `null` value to be a valid value
+for a field. The `null` value is serialized only when a field is a pointer
+in the Go definition, and does not have the `omitempty` json tag, or sometimes where a
+custom marshal function is implemented.
+
+For example, a map field marked with `+nullable` would accept either `foo: null` or `foo: {}`.
+
+Usage of `+nullable` is discouraged as it introduces several issues:
+- It is not compatible with json merge patching.
+  - From the [JSON Merge Patch RFC](https://tools.ietf.org/html/rfc7386#section-1):
+    > Null values in the merge patch are given special meaning to indicate the removal of existing values in the target.
+- Explicit `null` values are not persisted in proto serializations.
+- `null` values are not supported by Server-Side Apply applyconfiguration types.
+  - A persisted `null` value would not round-trip through the applyconfiguration type
+    encode/decode cycle.
+
+Avoid designing APIs that require the distinction between unset and `null`.
 
 ## Defaulting
 
@@ -1911,11 +1976,62 @@ the future, an HTTP/2 implementation will be exposed that deprecates SPDY.
 
 ## Validation
 
-API objects are validated upon receipt by the apiserver. Validation errors are
-flagged and returned to the caller in a `Failure` status with `reason` set to
-`Invalid`. In order to facilitate consistent error messages, we ask that
-validation logic adheres to the following guidelines whenever possible (though
-exceptional cases will exist).
+API objects are validated upon receipt by the apiserver. 
+Validation can be implemented in two ways: declaratively, using tags on the Go
+type definitions, or manually, by writing validation functions. For all new
+APIs, declarative validation is the preferred approach for the validation rules
+it supports.  For more information see the
+[declarative validation documentation](api_changes.md#declarative-validation).
+Validation errors are flagged and returned to the caller in a `Failure` status,
+usually with `reason` set to `Invalid`.
+
+### Requiredness
+
+All fields should be declared optional or required, and validation should
+check the requiredness.
+
+### Type-specific validation guidelines
+
+#### String fields
+
+Almost all string fields should be checked for format.  Some format checks
+include checking for length (e.g. "short-name", aka, "DNS Label" must be less
+than 64 bytes).
+
+All string fields should be checked for maximum length.  If the field has a
+minimum length, that should also be checked.
+
+Never do case-insensitive comparisons in validation.  This is a source of bugs
+and failed uniqueness assumptions.  If validation treats "abc" and "ABC" as
+the same, then ALL consumers of that field must do the same, and it is very
+easy to miss a case.
+
+#### Numeric fields
+
+All numeric fields should be bounds-checked, both for too-small values
+(including negative) and for too-large values.
+
+#### List fields
+
+All list fields should be checked for maximum size.  If the list has a minimum
+size, that should also be checked.
+
+All list fields should have their "listType" tag(s) set.  Lists with set or map
+semantics should be checked for uniqueness (declarative validation will do this
+authomatically).
+
+#### Map fields
+
+All map fields should be checked for maximum size.  If the map has a minimum
+size, that should also be checked.
+
+Map fields should have their keys validated, in addition to their values.
+
+### Error messages
+
+In order to facilitate consistent error messages, we ask that validation logic
+adheres to the following guidelines whenever possible (though exceptional cases
+will exist).
 
 * Be as precise as possible.
 * Telling users what they CAN do is more useful than telling them what they

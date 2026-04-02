@@ -15,10 +15,10 @@ The [charter](charter.md) defines the scope and governance of the Code of Conduc
 ## Members
 
 * Ana Margarita Medina (**[@AnaMMedina21](https://github.com/AnaMMedina21)**), Upbound
-* Danielle Lancashire (**[@endocrimes](https://github.com/endocrimes)**), Independent
-* Hilliary Lipsig (**[@hlipsig](https://github.com/hlipsig)**), Red Hat
+* Divya Mohan (**[@divya-mohan0209](https://github.com/divya-mohan0209)**), SUSE
+* Danielle Lancashire (**[@endocrimes](https://github.com/endocrimes)**), Fermyon
 * Jeremy Rickard (**[@jeremyrickard](https://github.com/jeremyrickard)**), Microsoft
-* Xander Grzywinski (**[@salaxander](https://github.com/salaxander)**), Independent
+* Sean McGinnis (**[@stmcginnis](https://github.com/stmcginnis)**), Lambda, Inc
 
 ## Emeritus Members
 
@@ -29,10 +29,12 @@ The [charter](charter.md) defines the scope and governance of the Code of Conduc
 * Carlos Tadeu Panato Jr. (**[@cpanato](https://github.com/cpanato)**)
 * Jason DeTiberus (**[@detiber](https://github.com/detiber)**)
 * Eric Paris (**[@eparis](https://github.com/eparis)**)
+* Hilliary Lipsig (**[@hlipsig](https://github.com/hlipsig)**)
 * Jaice Singer DuMars (**[@jdumars](https://github.com/jdumars)**)
 * Karen Chu (**[@karenhchu](https://github.com/karenhchu)**)
 * Nabarun Pal (**[@palnabarun](https://github.com/palnabarun)**)
 * Paris Pittman (**[@parispittman](https://github.com/parispittman)**)
+* Xander Grzywinski (**[@salaxander](https://github.com/salaxander)**)
 * Tasha Drew (**[@tashimi](https://github.com/tashimi)**)
 * Tim Pepper (**[@tpepper](https://github.com/tpepper)**)
 * Vallery Lancey (**[@vllry](https://github.com/vllry)**)
@@ -43,7 +45,7 @@ The [charter](charter.md) defines the scope and governance of the Code of Conduc
 - [Open Community Issues/PRs](https://github.com/kubernetes/community/labels/committee%2Fcode-of-conduct)
 - GitHub Teams:
     - [@kubernetes/code-of-conduct-committee](https://github.com/orgs/kubernetes/teams/code-of-conduct-committee) - General Discussion
-- Steering Committee Liaison: Sascha Grunert (**[@saschagrunert](https://github.com/saschagrunert)**)
+- Steering Committee Liaison: Benjamin Elder (**[@BenTheElder](https://github.com/BenTheElder)**)
 
 [subproject-definition]: https://github.com/kubernetes/community/blob/master/governance.md#subprojects
 <!-- BEGIN CUSTOM CONTENT -->
@@ -63,11 +65,11 @@ The members and their terms are as follows:
 - Jeremy Rickard
 - Ana Margarita Medina
 
-### Term ends on February 17, 2025
+### Term ends on February 17, 2027
 
 - Danielle Lancashire
-- Hilliary Lipsig
-- Xander Grzywinski
+- Divya Mohan
+- Sean McGinnis
 
 Please see the [bootstrapping document](./bootstrapping-process.md) and [election process guidelines](election.md) for more information on how members are picked and their responsibilities.
 

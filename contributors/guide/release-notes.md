@@ -123,7 +123,7 @@ Pull Request titles and body comments can be modified at any time prior to the
 release to make them friendly for release notes.
 
 The release notes team maintains a
-[template](https://github.com/kubernetes/sig-release/blob/master/release-team/role-handbooks/release-notes/relnotes-template.md)
+[template](https://github.com/kubernetes/sig-release/blob/master/release-team/role-handbooks/docs/relnotes-template.md)
 for Kubernetes Release notes that may help clarify whether or not your PR
 requires a release note. The most recent 
 [Kubernetes Release notes](https://kubernetes.io/docs/setup/release/notes/) can
@@ -159,4 +159,5 @@ In any other case the release note should be fine.
 * [Behind The Scenes: Kubernetes Release Notes Tips & Tricks - Mike Arpaia, Kolide (KubeCon 2018 Lightning Talk)](https://www.youtube.com/watch?v=n62oPohOyYs)
 
 [kubernetes-repository]: https://git.k8s.io/kubernetes/
-[Release Notes Handbook]: https://github.com/kubernetes/sig-release/tree/master/release-team/role-handbooks/release-notes
+[Release Notes Handbook]: https://github.com/kubernetes/sig-release/tree/master/release-team/role-handbooks/docs
+

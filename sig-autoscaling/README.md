@@ -14,7 +14,7 @@ The [charter](charter.md) defines the scope and governance of the Autoscaling Sp
 
 ## Meetings
 *Joining the [mailing list](https://groups.google.com/forum/#!forum/kubernetes-sig-autoscaling) for the group will typically add invites for the following meetings to your calendar.*
-* Regular SIG Meeting: [Mondays at 16:00 Poland](https://zoom.us/j/96548204174) (weekly). [Convert to your timezone](http://www.thetimezoneconverter.com/?t=16%3A00&tz=Poland).
+* Regular SIG Meeting: [Thursdays at 17:00 Poland](https://zoom.us/j/96548204174) (weekly). [Convert to your timezone](http://www.thetimezoneconverter.com/?t=17%3A00&tz=Poland).
   * [Meeting notes and Agenda](https://docs.google.com/document/d/1RvhQAEIrVLHbyNnuaT99-6u9ZUMp7BfkPupT2LAZK7w/edit).
 
 ## Leadership
@@ -23,11 +23,20 @@ The [charter](charter.md) defines the scope and governance of the Autoscaling Sp
 The Chairs of the SIG run operations and processes governing the SIG.
 
 * Guy Templeton (**[@gjtempleton](https://github.com/gjtempleton)**), Skyscanner
-* Maciek Pytel (**[@maciekpytel](https://github.com/maciekpytel)**), Google
+* Kuba Tużnik (**[@towca](https://github.com/towca)**), Google
+
+### Technical Leads
+The Technical Leads of the SIG establish new subprojects, decommission existing
+subprojects, and resolve cross-subproject technical issues and decisions.
+
+* Adrian Moisey (**[@adrianmoisey](https://github.com/adrianmoisey)**), SalesLoft
+* Jack Francis (**[@jackfrancis](https://github.com/jackfrancis)**), Microsoft
 
 ## Emeritus Leads
 
+* Maciek Pytel (**[@maciekpytel](https://github.com/maciekpytel)**)
 * Marcin Wielgus (**[@mwielgus](https://github.com/mwielgus)**)
+* Ray Wainman (**[@raywainman](https://github.com/raywainman)**)
 
 ## Contact
 - Slack: [#sig-autoscaling](https://kubernetes.slack.com/messages/sig-autoscaling)
@@ -48,6 +57,7 @@ The Chairs of the SIG run operations and processes governing the SIG.
 The following [working groups][working-group-definition] are sponsored by sig-autoscaling:
 * [WG Batch](/wg-batch)
 * [WG Device Management](/wg-device-management)
+* [WG Node Lifecycle](/wg-node-lifecycle)
 * [WG Serving](/wg-serving)
 
 
@@ -66,6 +76,7 @@ The following [subprojects][subproject-definition] are owned by sig-autoscaling:
   - [kubernetes/kubernetes/pkg/controller/podautoscaler](https://github.com/kubernetes/kubernetes/blob/master/pkg/controller/podautoscaler/OWNERS)
 ### karpenter
 - **Owners:**
+  - [kubernetes-sigs/karpenter-provider-ibm-cloud](https://github.com/kubernetes-sigs/karpenter-provider-ibm-cloud/blob/main/OWNERS)
   - [kubernetes-sigs/karpenter](https://github.com/kubernetes-sigs/karpenter/blob/main/OWNERS)
 - **Contact:**
   - Slack: [#karpenter](https://kubernetes.slack.com/messages/karpenter)

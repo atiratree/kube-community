@@ -29,8 +29,8 @@ The [charter](charter.md) defines the scope and governance of the Auth Special I
 ### Chairs
 The Chairs of the SIG run operations and processes governing the SIG.
 
-* Mo Khan (**[@enj](https://github.com/enj)**), Microsoft
-* Mike Danese (**[@mikedanese](https://github.com/mikedanese)**), Google
+* Anish Ramasekar (**[@aramase](https://github.com/aramase)**), Microsoft
+* Micah Hausler (**[@micahhausler](https://github.com/micahhausler)**), Amazon
 * Rita Zhang (**[@ritazh](https://github.com/ritazh)**), Microsoft
 
 ### Technical Leads
@@ -45,6 +45,7 @@ subprojects, and resolve cross-subproject technical issues and decisions.
 
 * Eric Chiang (**[@ericchiang](https://github.com/ericchiang)**)
 * Eric Tune (**[@erictune](https://github.com/erictune)**)
+* Mike Danese (**[@mikedanese](https://github.com/mikedanese)**)
 * Tim Allclair (**[@tallclair](https://github.com/tallclair)**)
 
 ## Contact
@@ -59,12 +60,13 @@ subprojects, and resolve cross-subproject technical issues and decisions.
     - [@kubernetes/sig-auth-pr-reviews](https://github.com/orgs/kubernetes/teams/sig-auth-pr-reviews) - PR Reviews
     - [@kubernetes/sig-auth-proposals](https://github.com/orgs/kubernetes/teams/sig-auth-proposals) - Design Proposals
     - [@kubernetes/sig-auth-test-failures](https://github.com/orgs/kubernetes/teams/sig-auth-test-failures) - Test Failures and Triage
-- Steering Committee Liaison: Patrick Ohly (**[@pohly](https://github.com/pohly)**)
+- Steering Committee Liaison: Kat Cosgrove (**[@katcosgrove](https://github.com/katcosgrove)**)
 
 ## Working Groups
 
 The following [working groups][working-group-definition] are sponsored by sig-auth:
-* [WG Policy](/wg-policy)
+* [WG AI Integration](/wg-ai-integration)
+* [WG Checkpoint Restore](/wg-checkpoint-restore)
 
 
 ## Subprojects
@@ -123,10 +125,6 @@ API storage support for storing data encrypted at rest in etcd.
 - **Owners:**
   - [kubernetes/kubernetes/staging/src/k8s.io/apiserver/pkg/server/options/encryptionconfig](https://github.com/kubernetes/kubernetes/blob/master/staging/src/k8s.io/apiserver/pkg/server/options/encryptionconfig/OWNERS)
   - [kubernetes/kubernetes/staging/src/k8s.io/apiserver/pkg/storage/value](https://github.com/kubernetes/kubernetes/blob/master/staging/src/k8s.io/apiserver/pkg/storage/value/OWNERS)
-### hierarchical-namespace-controller
-Controller to manage hierarchical namespaces
-- **Owners:**
-  - [kubernetes-sigs/hierarchical-namespaces](https://github.com/kubernetes-sigs/hierarchical-namespaces/blob/master/OWNERS)
 ### node-identity-and-isolation
 Node identity management (co-owned with sig-lifecycle), and authorization restrictions for isolating workloads on separate nodes (co-owned with sig-node).
 - **Owners:**
@@ -137,8 +135,6 @@ Node identity management (co-owned with sig-lifecycle), and authorization restri
 ### policy-management
 API validation and policies enforced during admission, such as PodSecurityPolicy. Excludes run-time policies like NetworkPolicy and Seccomp.
 - **Owners:**
-  - [kubernetes-sigs/pspmigrator](https://github.com/kubernetes-sigs/pspmigrator/blob/main/OWNERS)
-  - [kubernetes-sigs/wg-policy-prototypes](https://github.com/kubernetes-sigs/wg-policy-prototypes/blob/master/OWNERS)
   - [kubernetes/kms](https://github.com/kubernetes/kms/blob/main/OWNERS)
   - [kubernetes/kubernetes/pkg/apis/imagepolicy](https://github.com/kubernetes/kubernetes/blob/master/pkg/apis/imagepolicy/OWNERS)
   - [kubernetes/kubernetes/pkg/apis/policy](https://github.com/kubernetes/kubernetes/blob/master/pkg/apis/policy/OWNERS)
@@ -151,6 +147,9 @@ API validation and policies enforced during admission, such as PodSecurityPolicy
   - [kubernetes/pod-security-admission](https://github.com/kubernetes/pod-security-admission/blob/master/OWNERS)
 ### secrets-store-csi-driver
 Integrates secrets stores with Kubernetes via a CSI volume.
+- **Leads:**
+  - Anish Ramasekar (**[@aramase](https://github.com/aramase)**), Microsoft
+  - Rita Zhang (**[@ritazh](https://github.com/ritazh)**), Microsoft
 - **Owners:**
   - [kubernetes-sigs/secrets-store-csi-driver](https://github.com/kubernetes-sigs/secrets-store-csi-driver/blob/master/OWNERS)
 - **Contact:**
@@ -158,6 +157,9 @@ Integrates secrets stores with Kubernetes via a CSI volume.
   - [Mailing List](https://groups.google.com/forum/#!forum/kubernetes-secrets-store-csi-driver)
 ### secrets-store-sync-controller
 This is a Kubernetes controller that watches for changes to a custom resource and syncs the secrets from external secrets-store as Kubernetes secret.
+- **Leads:**
+  - Anish Ramasekar (**[@aramase](https://github.com/aramase)**), Microsoft
+  - Mo Khan (**[@enj](https://github.com/enj)**), Microsoft
 - **Owners:**
   - [kubernetes-sigs/secrets-store-sync-controller](https://github.com/kubernetes-sigs/secrets-store-sync-controller/blob/main/OWNERS)
 ### service-accounts

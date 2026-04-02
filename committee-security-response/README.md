@@ -14,11 +14,14 @@ The Kubernetes Security Response Committee is the body that is responsible for r
 ## Members
 
 * Sri Saran Balaji (**[@SaranBalaji90](https://github.com/SaranBalaji90)**), Amazon
+* Vyom Yadav (**[@Vyom-Yadav](https://github.com/Vyom-Yadav)**), Canonical
 * CJ Cullen (**[@cjcullen](https://github.com/cjcullen)**), Google
 * Craig Ingram (**[@cji](https://github.com/cji)**), Google
 * Mo Khan (**[@enj](https://github.com/enj)**), Microsoft
 * Joel Smith (**[@joelsmith](https://github.com/joelsmith)**), Red Hat
 * Micah Hausler (**[@micahhausler](https://github.com/micahhausler)**), Amazon
+* Nathan Herz (**[@natherz97](https://github.com/natherz97)**), Amazon
+* Adolfo García Veytia (**[@puerco](https://github.com/puerco)**), Carabiner Systems, Inc
 * Rita Zhang (**[@ritazh](https://github.com/ritazh)**), Microsoft
 * Tabitha Sable (**[@tabbysable](https://github.com/tabbysable)**), Datadog
 
@@ -33,7 +36,7 @@ The Kubernetes Security Response Committee is the body that is responsible for r
 - [Open Community Issues/PRs](https://github.com/kubernetes/community/labels/committee%2Fsecurity-response)
 - GitHub Teams:
     - [@kubernetes/security-response-committee](https://github.com/orgs/kubernetes/teams/security-response-committee) - General Discussion
-- Steering Committee Liaison: Stephen Augustus (**[@justaugustus](https://github.com/justaugustus)**)
+- Steering Committee Liaison: Kat Cosgrove (**[@katcosgrove](https://github.com/katcosgrove)**)
 
 ## Subprojects
 

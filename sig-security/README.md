@@ -8,7 +8,7 @@ To understand how this file is generated, see https://git.k8s.io/community/gener
 --->
 # Security Special Interest Group
 
-Covers horizontal security initiatives for the Kubernetes project, including regular security audits, the vulnerability management process, cross-cutting security documentation, and security community management.
+SIG Security takes a community-building approach to improving security for end users, project maintainers, and the Kubernetes project itself. We work collaboratively across SIGs to advance security-related features, write and update documentation, and maintain security processes and tools for the benefit of all.
 
 The [charter](charter.md) defines the scope and governance of the Security Special Interest Group.
 
@@ -23,7 +23,7 @@ The [charter](charter.md) defines the scope and governance of the Security Speci
 ### Chairs
 The Chairs of the SIG run operations and processes governing the SIG.
 
-* Ian Coldwater (**[@IanColdwater](https://github.com/IanColdwater)**), Docker
+* Ian Coldwater (**[@IanColdwater](https://github.com/IanColdwater)**), Independent
 * Cailyn Edwards (**[@cailyn-codes](https://github.com/cailyn-codes)**), Okta
 * Tabitha Sable (**[@tabbysable](https://github.com/tabbysable)**), Datadog
 
@@ -34,7 +34,7 @@ The Chairs of the SIG run operations and processes governing the SIG.
 - GitHub Teams:
     - [@kubernetes/sig-security-leads](https://github.com/orgs/kubernetes/teams/sig-security-leads) - SIG Security Leads
     - [@kubernetes/sig-security-pr-reviews](https://github.com/orgs/kubernetes/teams/sig-security-pr-reviews) - SIG Security PR review notifications
-- Steering Committee Liaison: Stephen Augustus (**[@justaugustus](https://github.com/justaugustus)**)
+- Steering Committee Liaison: Kat Cosgrove (**[@katcosgrove](https://github.com/katcosgrove)**)
 
 ## Working Groups
 
@@ -45,12 +45,6 @@ The following [working groups][working-group-definition] are sponsored by sig-se
 ## Subprojects
 
 The following [subprojects][subproject-definition] are owned by sig-security:
-### security-assessments
-Security self assessments for upstream projects
-- **Owners:**
-  - [kubernetes/sig-security/sig-security-assessments](https://github.com/kubernetes/sig-security/blob/main/sig-security-assessments/OWNERS)
-- **Contact:**
-  - Slack: [#sig-security-assessments](https://kubernetes.slack.com/messages/sig-security-assessments)
 ### security-audit
 Third Party Security Audit
 - **Owners:**
@@ -61,6 +55,12 @@ Security Documents and Documentation
   - [kubernetes/sig-security/sig-security-docs](https://github.com/kubernetes/sig-security/blob/main/sig-security-docs/OWNERS)
 - **Contact:**
   - Slack: [#sig-security-docs](https://kubernetes.slack.com/messages/sig-security-docs)
+### security-self-assessments
+Security self-assessments for K8s subprojects
+- **Owners:**
+  - [kubernetes/sig-security/sig-security-assessments](https://github.com/kubernetes/sig-security/blob/main/sig-security-assessments/OWNERS)
+- **Contact:**
+  - Slack: [#sig-security-assessments](https://kubernetes.slack.com/messages/sig-security-assessments)
 ### security-tooling
 Development and Enhancements of Security Tooling
 - **Owners:**

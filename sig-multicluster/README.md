@@ -14,7 +14,10 @@ The [charter](charter.md) defines the scope and governance of the Multicluster S
 
 ## Meetings
 *Joining the [mailing list](https://groups.google.com/forum/#!forum/kubernetes-sig-multicluster) for the group will typically add invites for the following meetings to your calendar.*
-* Regular SIG Meeting: [Tuesdays at 9:30 PT (Pacific Time)](https://zoom.us/my/k8s.mc) (bi-weekly). [Convert to your timezone](http://www.thetimezoneconverter.com/?t=9%3A30&tz=PT%20%28Pacific%20Time%29).
+* APAC-Friendly SIG Meeting: [Thursdays at 6:30 UTC](https://zoom.us/my/k8s.mc) (bi-weekly). [Convert to your timezone](http://www.thetimezoneconverter.com/?t=6%3A30&tz=UTC).
+  * [Meeting notes and Agenda](https://tinyurl.com/sig-multicluster-notes).
+  * [Meeting recordings](https://www.youtube.com/playlist?list=PL69nYSiGNLP0HqgyqTby6HlDEz7i1mb0-).
+* Regular SIG Meeting: [Tuesdays at 9:30 PT (Pacific Time)](https://zoom.us/my/k8s.mc) (weekly). [Convert to your timezone](http://www.thetimezoneconverter.com/?t=9%3A30&tz=PT%20%28Pacific%20Time%29).
   * [Meeting notes and Agenda](https://tinyurl.com/sig-multicluster-notes).
   * [Meeting recordings](https://www.youtube.com/playlist?list=PL69nYSiGNLP0HqgyqTby6HlDEz7i1mb0-).
 
@@ -48,7 +51,7 @@ The Chairs of the SIG run operations and processes governing the SIG.
 ## Working Groups
 
 The following [working groups][working-group-definition] are sponsored by sig-multicluster:
-* [WG Policy](/wg-policy)
+* [WG AI Gateway](/wg-ai-gateway)
 
 
 ## Subprojects
@@ -63,6 +66,9 @@ The following [subprojects][subproject-definition] are owned by sig-multicluster
 ### mcs-api
 - **Owners:**
   - [kubernetes-sigs/mcs-api](https://github.com/kubernetes-sigs/mcs-api/blob/master/OWNERS)
+### multicluster-runtime
+- **Owners:**
+  - [kubernetes-sigs/multicluster-runtime](https://github.com/kubernetes-sigs/multicluster-runtime/blob/main/OWNERS)
 ### sig-multicluster-site
 - **Owners:**
   - [kubernetes-sigs/sig-multicluster-site](https://github.com/kubernetes-sigs/sig-multicluster-site/blob/main/OWNERS)

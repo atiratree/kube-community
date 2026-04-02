@@ -24,12 +24,13 @@ The [charter](charter.md) defines the scope and governance of the Scalability Sp
 The Chairs of the SIG run operations and processes governing the SIG.
 
 * Marcel Zieba (**[@marseel](https://github.com/marseel)**), Isovalent
-* Shyam Jeedigunta (**[@shyamjvs](https://github.com/shyamjvs)**), Amazon
+* David (Mengqi) Yu (**[@mengqiy](https://github.com/mengqiy)**), Amazon
 
 ### Technical Leads
 The Technical Leads of the SIG establish new subprojects, decommission existing
 subprojects, and resolve cross-subproject technical issues and decisions.
 
+* Shyam Jeedigunta (**[@shyamjvs](https://github.com/shyamjvs)**), Amazon
 * Wojciech Tyczynski (**[@wojtek-t](https://github.com/wojtek-t)**), Google
 
 ## Emeritus Leads
@@ -49,6 +50,10 @@ subprojects, and resolve cross-subproject technical issues and decisions.
 ## Subprojects
 
 The following [subprojects][subproject-definition] are owned by sig-scalability:
+### inference-perf
+[Described below](#inference-perf)
+- **Owners:**
+  - [kubernetes-sigs/inference-perf/heads/main](https://github.com/kubernetes-sigs/inference-perf/blob/refs/heads/main/OWNERS)
 ### kubernetes-scalability-and-performance-tests-and-validation
 [Described below](#kubernetes-scalability-and-performance-tests-and-validation)
 - **Owners:**
@@ -164,5 +169,8 @@ of scalability and performance regressions:
 
 * [Processes](https://github.com/kubernetes/community/tree/master/sig-scalability/processes)
 
+## Inference perf
+
+TODO: to fill in.
 
 <!-- END CUSTOM CONTENT -->

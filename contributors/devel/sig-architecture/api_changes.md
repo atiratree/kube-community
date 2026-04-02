@@ -39,6 +39,7 @@ found at [API Conventions](api-conventions.md).
 - [Alpha, Beta, and Stable Versions](#alpha-beta-and-stable-versions)
   - [Adding Unstable Features to Stable Versions](#adding-unstable-features-to-stable-versions)
     - [New field in existing API version](#new-field-in-existing-api-version)
+    - [Ratcheting validation](#ratcheting-validation)
     - [New enum value in existing field](#new-enum-value-in-existing-field)
     - [New alpha API version](#new-alpha-api-version)
 
@@ -602,9 +603,9 @@ Given that you have not yet changed the internal structs, this might feel
 premature, and that's because it is. You don't yet have anything to convert to
 or from. We will revisit this in the "internal" section. If you're doing this
 all in a different order (i.e. you started with the internal structs), then you
-should jump to that topic below. In the very rare case that you are making an
-incompatible change you might or might not want to do this now, but you will
-have to do more later. The files you want are
+should jump to [that topic below](#edit-version-conversions). In the very rare
+case that you are making an incompatible change you might or might not want to
+do this now, but you will have to do more later. The files you want are
 `pkg/apis/<group>/<version>/conversion.go` and
 `pkg/apis/<group>/<version>/conversion_test.go`.
 
@@ -644,6 +645,67 @@ optionality of fields.
 
 Of course, code needs tests - `pkg/apis/<group>/validation/validation_test.go`.
 
+### Declarative Validation
+
+For new APIs, developers should use declarative validation for all validation rules that declarative validation supports.
+See the [declarative validation tag catalog](https://kubernetes.io/docs/reference/using-api/declarative-validation/) for the list of supported validation rules.
+This allows you to define validation rules directly on the API types using special Go comment tags.
+These validation rules are easier to write, review, and maintain as they live alongside the type and field definitions.
+
+A new code generator, `validation-gen`, processes these tags to produce the validation logic automatically, reducing the need to write manual validation code in `validation.go`.
+
+
+Setting up validation code generation involves the following steps.
+For APIs already using declarative validation, the first 2 plumbing steps can be skipped:
+- Register the desired API group with validation-gen, similar to other code generators([Example PR doc.go change](https://github.com/kubernetes/kubernetes/pull/130724))
+- Wire up the `strategy.go` for the desired API group to use declarative validation ([Example PR strategy.go change](https://github.com/kubernetes/kubernetes/pull/130724))
+- Add declarative validation tags to the types and fields of the registered package ([Example PR types.go change](https://github.com/kubernetes/kubernetes/pull/130725))
+- Run the validation-gen code generator (see below)
+
+Below is an example of how to register an API group with validation-gen:
+
+`pkg/apis/core/v1/doc.go`
+```go
+...
+// +k8s:validation-gen=TypeMeta
+// +k8s:validation-gen-input=k8s.io/api/core/v1
+
+// Package v1 is the v1 version of the API.
+package v1
+```
+
+Below is an example of how to use declarative validation tags in a `types.go` file:
+
+```go
+// ReplicationControllerSpec is the specification of a replication controller.
+type ReplicationControllerSpec struct {
+      // Replicas is the number of desired replicas.
+      // This is a pointer to distinguish between explicit zero and not specified.
+      // +k8s:optional
+      // +k8s:minimum=0
+      Replicas *int32 `json:"replicas,omitempty"`
+
+      // Minimum number of seconds for which a newly created pod should be ready
+      // without any of its container crashing, for it to be considered available.
+      // +k8s:optional
+      // +k8s:minimum=0
+      MinReadySeconds int32 `json:"minReadySeconds,omitempty"`
+}
+```
+
+In this example, the `+k8s:optional` and `+k8s:minimum=0` tags specify that the `Replicas` and `MinReadySeconds` fields are optional and must have a value of at least 0 if present.
+
+After adding these tags to your types, you will need to run the code generator to create or update the validation functions.
+This is typically done by running `make update` or `hack/update-codegen.sh`.
+To only run the declarative validation code generator, use `hack/update-codegen.sh validation`.
+Running the validation-gen code generator will create a `zz_generated.validations.go` file for the declarative validations of the associated tagged API types and fields.
+The generated validation methods in this file are then called via the modified `strategy.go` file in the above steps.
+
+Testing the validation logic for the behaviour of a type is identical to the testing that would be done for hand-written validation code.
+Users will need to write go unit tests similar to what is done for hand-written validation logic that verify specific cases are allowed, disallowed, etc and the validation behaviour is as expected.
+
+While the goal is to express as much validation declaratively as possible, some complex or validation rules might still require manual implementation in `validation.go`.
+
 ## Edit version conversions
 
 At this point you have both the versioned API changes and the internal
@@ -669,7 +731,7 @@ those manually written should be named with a defined convention, i.e. a
 function converting type `X` in pkg `a` to type `Y` in pkg `b`, should be named:
 `convert_a_X_To_b_Y`.
 
-Also note that you can (and for efficiency reasons should) use auto-generated
+**Note:** You should, for efficiency reasons and future updates, use auto-generated
 conversion functions when writing your conversion functions.
 
 Adding manually written conversion also requires you to add tests to
@@ -697,6 +759,7 @@ workaround is to remove the files causing errors and rerun the command.
 
 Apart from the `defaulter-gen`, `deepcopy-gen`, `conversion-gen` and
 `openapi-gen`, there are a few other generators:
+ - `validation-gen` (for generating validation functions from declarative tags)
  - `go-to-protobuf`
  - `client-gen`
  - `lister-gen`
@@ -712,7 +775,7 @@ The generators that create go code have a `--go-header-file` flag
 which should be a file that contains the header that should be
 included. This header is the copyright that should be present at the
 top of the generated file and should be checked with the
-[`repo-infra/verify/verify-boilerplane.sh`](https://git.k8s.io/repo-infra/verify/verify-boilerplate.sh)
+[`repo-infra/verify/verify-boilerplate.sh`](https://git.k8s.io/repo-infra/verify/verify-boilerplate.sh)
 script at a later stage of the build.
 
 To invoke these generators, you can run `make update`, which runs a bunch of
@@ -878,13 +941,13 @@ You need to regenerate the generated code as instructed in the sections above.
 Part of our testing regimen for APIs is to "fuzz" (fill with random values) API
 objects and then convert them to and from the different API versions. This is
 a great way of exposing places where you lost information or made bad
-assumptions. 
+assumptions.
 
 The fuzzer works by creating a random API object and calling the custom fuzzer
 function in `pkg/apis/$GROUP/fuzzer/fuzzer.go`. The resulting object is then
 round-tripped from one api version to another, and verified to be the same as
 what was started with. Validation is not run during this process, but defaulting
-is.  
+is.
 
 If you have added any fields which need very careful formatting (the test does
 not run validation) or if you have made assumptions during defaulting such as
@@ -998,9 +1061,9 @@ complexity of upgradeability and lack of long-term support and lack of
 upgradability.
 - Beta level:
   - Object Versioning: API version name contains `beta` (e.g. `v2beta3`)
-  - Availability: in official Kubernetes releases; API is disabled by default 
+  - Availability: in official Kubernetes releases; API is disabled by default
 but may be enabled by a flag.
-(Note: beta APIs introduced before v1.24 were enabled by default, but this 
+(Note: beta APIs introduced before v1.24 were enabled by default, but this
 [changed for new beta APIs](https://github.com/kubernetes/enhancements/blob/master/keps/sig-architecture/3136-beta-apis-off-by-default/README.md))
   - Audience: users interested in providing feedback on features
   - Completeness: all API operations, CLI commands, and UI support should be
@@ -1224,6 +1287,37 @@ In future Kubernetes versions:
       // +k8s:deprecated=width,protobuf=3
     }
     ```
+
+#### Ratcheting validation
+
+The word "ratcheting" refers to a process of incremental and often irreversible
+progression or change, typically in a single direction. The term originates from
+a mechanical device called a [ratchet](https://en.wikipedia.org/wiki/Ratchet_(device)),
+which consists of a toothed wheel or bar and a pawl (a catch) that allows movement
+in only one direction while preventing backward motion.
+
+In the Kubernetes world, a ratcheting validation refers to an incremental tightening
+of validation. This means we allow current resources to either remain invalid or
+be fixed, but all new resources must pass the validation. The following table
+best illustrates these cases:
+
+| Resource    | Validation |
+|-------------|------------|
+| new valid   | succeeds   |
+| new invalid | fails      |
+| old valid   | succeeds   |
+| old invalid | succeeds   |
+
+A good example of ratcheting validation was introduced in [this pull request](https://github.com/kubernetes/kubernetes/pull/130233).
+It introduced validation for the optional `.spec.serviceName` field for StatefulSet,
+such that old resources (regardless of whether they are valid or not) will succeed
+the validation check, but new resources must adhere to stricter validation rules
+for that field. The relevant changes include:
+- A struct with options passed to validation methods (here it's the `StatefulSetValidationOptions`
+  struct, with `AllowInvalidServiceName` to handle this specific case).
+- Appropriate changes inside `Validate*` methods which ensure the rules from the
+  table above are implemented.
+- Tests ensuring all the cases from the above table are covered.
 
 #### New enum value in existing field
 

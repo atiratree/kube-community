@@ -13,7 +13,7 @@ The Architecture SIG maintains and evolves the design principles of Kubernetes, 
 The [charter](charter.md) defines the scope and governance of the Architecture Special Interest Group.
 
 ## Meetings
-*Joining the [mailing list](https://groups.google.com/forum/#!forum/kubernetes-sig-architecture) for the group will typically add invites for the following meetings to your calendar.*
+*Joining the [mailing list](https://groups.google.com/a/kubernetes.io/g/sig-architecture) for the group will typically add invites for the following meetings to your calendar.*
 * Enhancements Subproject Meeting: [Thursdays at 10:00 PT (Pacific Time)](https://zoom.us/j/95357819945) (biweekly). [Convert to your timezone](http://www.thetimezoneconverter.com/?t=10%3A00&tz=PT%20%28Pacific%20Time%29).
   * [Meeting notes and Agenda](https://bit.ly/k8s-enhancements-agenda).
   * [Meeting recordings](TBD).
@@ -36,12 +36,12 @@ The [charter](charter.md) defines the scope and governance of the Architecture S
 The Chairs of the SIG run operations and processes governing the SIG.
 
 * Derek Carr (**[@derekwaynecarr](https://github.com/derekwaynecarr)**), Red Hat
-* Davanum Srinivas (**[@dims](https://github.com/dims)**), Amazon
+* Davanum Srinivas (**[@dims](https://github.com/dims)**), NVIDIA
 * John Belamaric (**[@johnbelamaric](https://github.com/johnbelamaric)**), Google
 
 ## Contact
 - Slack: [#sig-architecture](https://kubernetes.slack.com/messages/sig-architecture)
-- [Mailing list](https://groups.google.com/forum/#!forum/kubernetes-sig-architecture)
+- [Mailing list](https://groups.google.com/a/kubernetes.io/g/sig-architecture)
 - [Open Community Issues/PRs](https://github.com/kubernetes/community/labels/sig%2Farchitecture)
 - GitHub Teams:
     - [@kubernetes/sig-architecture-api-reviews](https://github.com/orgs/kubernetes/teams/sig-architecture-api-reviews) - API Changes and Reviews
@@ -56,9 +56,10 @@ The Chairs of the SIG run operations and processes governing the SIG.
 ## Working Groups
 
 The following [working groups][working-group-definition] are sponsored by sig-architecture:
+* [WG AI Conformance](/wg-ai-conformance)
+* [WG AI Integration](/wg-ai-integration)
 * [WG Device Management](/wg-device-management)
 * [WG LTS](/wg-lts)
-* [WG Policy](/wg-policy)
 * [WG Serving](/wg-serving)
 * [WG Structured Logging](/wg-structured-logging)
 
@@ -106,12 +107,20 @@ Snooping on the Kubernetes OpenAPI communications
   - [kubernetes/enhancements](https://github.com/kubernetes/enhancements/blob/master/OWNERS)
 - **Contact:**
   - Slack: [#enhancements](https://kubernetes.slack.com/messages/enhancements)
+### maintainer-tools
+Tooling based on Deep Learning tools to help maintainers to maintain the Kubernetes project.
+- **Owners:**
+  - [kubernetes-sigs/maintainer-tools/heads/main](https://github.com/kubernetes-sigs/maintainer-tools/blob/refs/heads/main/OWNERS)
 ### production-readiness
 [Described below](#production-readiness-1)
 - **Owners:**
   - [kubernetes/community/sig-architecture](https://github.com/kubernetes/community/blob/master/sig-architecture/OWNERS)
 - **Contact:**
   - Slack: [#prod-readiness](https://kubernetes.slack.com/messages/prod-readiness)
+### wg-ai-conformance
+Proposals and discussions for the AI Conformance Working Group
+- **Owners:**
+  - [kubernetes-sigs/wg-ai-conformance](https://github.com/kubernetes-sigs/wg-ai-conformance/blob/main/OWNERS)
 ### wg-device-management
 Contains prototype code for future work driven by WG Device Management
 - **Owners:**

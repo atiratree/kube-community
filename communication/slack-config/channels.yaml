@@ -3,6 +3,7 @@
 
 channels:
   - name: africa-dev
+  - name: agent-sandbox
   - name: airflow-operator
   - name: akri
   - name: azure-aks
@@ -33,6 +34,7 @@ channels:
   - name: bazel
   - name: bindings-discuss
   - name: blixt
+    archived: true
   - name: bootkube
     archived: true
   - name: bpfman
@@ -84,6 +86,7 @@ channels:
   - name: cluster-api-proxmox
   - name: cluster-api-release
   - name: cluster-api-vsphere
+  - name: cluster-api-wg-machinepools
   - name: cn-dev
   - name: cn-events
   - name: cn-users
@@ -159,6 +162,7 @@ channels:
   - name: gke
   - name: gloo
   - name: gophercloud
+  - name: gpu-nvidia
   - name: grafana-operator
   - name: haproxy-ingress
   - name: headlamp
@@ -186,6 +190,7 @@ channels:
   - name: in-dev
   - name: in-events
   - name: in-users
+  - name: inference-perf
   - name: ingate-dev
   - name: ingate-users
   - name: ingress-nginx-dev
@@ -215,13 +220,14 @@ channels:
   - name: k8s-dual-stack
     archived: true
   - name: k8s-image-swapper
-  - name: k8s-infra-alerts
+  # k8s-infra-alerts is defined in sig-k8s-infra/
   - name: k8s-release
     archived: true
   - name: k8spin
   - name: kamaji
   - name: kapitan
   - name: kcp-dev
+  - name: kcp-users
     id: C021U8WSAFK
   - name: keda
   - name: keda-dev
@@ -318,6 +324,7 @@ channels:
   - name: kubespray
   - name: kubespray-dev
   - name: kubevirt-dev
+  - name: kubetail
   - name: kubewarden
   - name: kubewarden-dev
   - name: kubicorn
@@ -464,6 +471,7 @@ channels:
   - name: shoutouts
   - name: sig-api-machinery
   - name: sig-api-machinery-cel-dev
+  - name: sig-api-machinery-dev-tools
   - name: sig-api-machinery-storageversion-dev
   - name: sig-apps
   - name: sig-auth
@@ -476,6 +484,7 @@ channels:
   - name: sig-autoscaling-api
   - name: sig-cli
   - name: sig-cli-krm-functions
+    archived: true
   - name: sig-clstr-life-leads
   - name: sig-cluster-lifecycle
   - name: sig-cluster-ops
@@ -497,6 +506,8 @@ channels:
   - name: sig-instrumentation
   - name: sig-multicluster
   - name: sig-network
+  - name: sig-network-agentic-networking
+  - name: sig-network-ingress2gateway
   - name: sig-network-kni
   - name: sig-network-multi-network
   # sig-node channels are defined in sig-node/
@@ -518,6 +529,7 @@ channels:
   - name: solr-operator
   - name: sonobuoy
   - name: spark-operator
+    archived: true
   - name: spegel
   - name: spinnaker
   - name: sre
@@ -526,6 +538,7 @@ channels:
   - name: surveys
   - name: summit-staff
   - name: suse-caasp
+  - name: syself
   - name: talk-proposals
     archived: true
   - name: tanzu-community-edition
@@ -560,6 +573,9 @@ channels:
   - name: virtualization
   - name: vsphere
     archived: true
+  - name: wg-ai-conformance
+  - name: wg-ai-gateway
+  - name: wg-ai-integration
   - name: wg-app-def
     archived: true
   - name: wg-api-expression
@@ -567,6 +583,7 @@ channels:
     archived: true
   - name: wg-batch
   - name: wg-serving
+  - name: wg-checkpoint-restore
   - name: wg-component-standard
     archived: true
   - name: wg-component-standard-mentorship
@@ -576,14 +593,14 @@ channels:
     id: C0409NGC1TK
   - name: wg-etcd-operator
   - name: wg-iot-edge
-  - name: sig-k8s-infra
-    id: CCK68P2Q2
+  # sig-k8s-infra is defined in sig-k8s-infra/
   - name: wg-lts
   - name: wg-machine-learning
     archived: true
   - name: wg-multitenancy
   - name: wg-naming
     archived: true
+  - name: wg-node-lifecycle
   - name: wg-onprem
     archived: true
   - name: wg-policy

@@ -28,10 +28,6 @@ Long Term Contributor Ladder Growth
 
 - Through [Group Mentoring Cohorts](/mentoring/programs/group-mentoring.md)
 
-Specific topics and activities
-
-- [The 1:1 Hour](/mentoring/programs/the1-on-1hour.md)
-
 Role based shadow programs
 
 - [List of programs](/mentoring/programs/shadow-roles.md)
@@ -44,10 +40,6 @@ Students
 
 - [LFX Mentorship](/mentoring/programs/lfx-mentorship.md)
 
-Tech Writers
-
-- [Google Season of Docs](/mentoring/programs/google-season-of-docs.md)
-
 Groups Traditionally Underrepresented in Tech
 
 - [Outreachy](/mentoring/programs/outreachy.md)
@@ -57,7 +49,17 @@ In person
 - [Videos of New Contributor Workshop](https://www.youtube.com/playlist?list=PL69nYSiGNLP3M5X7stuD7N4r3uP2PZQUx)
 - Pod Mentoring! [aka group mentoring](/mentoring/programs/mentoring-events.md)
 
-#### Inspiration and Thanks
+## Discontinued activities:
+
+Specific topics and activities
+
+- [The 1:1 Hour](/mentoring/programs/the1-on-1hour.md)
+
+Tech Writers
+
+- [Google Season of Docs](/mentoring/programs/google-season-of-docs.md) (2019-2024)
+
+## Inspiration and Thanks
 
 This is not an out of the box program but was largely inspired by the following:
 

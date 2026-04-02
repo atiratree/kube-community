@@ -24,6 +24,7 @@ It should serve as a reference for all contributors, and be useful especially to
 - [Best Practices for Faster Reviews](#best-practices-for-faster-reviews)
   - [Familiarize yourself with project conventions](#familiarize-yourself-with-project-conventions)
   - [Is the feature wanted? File a Kubernetes Enhancement Proposal](#is-the-feature-wanted-file-a-kubernetes-enhancement-proposal)
+  - [KISS, YAGNI, MVP, etc.](#kiss-yagni-mvp-etc)
   - [Smaller Is Better: Small Commits, Small Pull Requests](#smaller-is-better-small-commits-small-pull-requests)
   - [Open a Different Pull Request for Fixes and Generic Features](#open-a-different-pull-request-for-fixes-and-generic-features)
   - [Don't Open Pull Requests That Span the Whole Repository](#dont-open-pull-requests-that-span-the-whole-repository)
@@ -31,10 +32,12 @@ It should serve as a reference for all contributors, and be useful especially to
   - [Test](#test)
   - [Squashing](#squashing)
   - [Commit Message Guidelines](#commit-message-guidelines)
-  - [KISS, YAGNI, MVP, etc.](#kiss-yagni-mvp-etc)
   - [It's OK to Push Back](#its-ok-to-push-back)
   - [Common Sense and Courtesy](#common-sense-and-courtesy)
   - [Trivial Edits](#trivial-edits)
+  - [Large or Automatic Edits](#large-or-automatic-edits)
+  - [Fixing Linter Issues](#fixing-linter-issues)
+  - [AI Guidance](#ai-guidance)
 - [The Testing and Merge Workflow](#the-testing-and-merge-workflow)
   - [More About `Ok-To-Test`](#more-about-ok-to-test)
 
@@ -268,12 +271,17 @@ handful of people who can approve changes across large portions of the repositor
 are generally the people who are the most busy and hardest to get reviews from, especially
 when you're a new contributor with no connections within the community yet.)
 
+The effort required to review such sweeping changes might not be worth it, see
+["large or automatic edits"](#large-or-automatic-edits) below.
+
 If you really want to try to get such a PR merged, your best bet is to break up the PR
 into separate PRs for each SIG whose code it touches. You can look at the `OWNERS` files
 in a directory (or its parent directory) to see who owns that code, and then group the
 changes together accordingly (e.g., with one PR touching files in `cmd/kube-proxy` and
 `pkg/util/iptables`, which are owned by SIG Network, and another PR touching files in
 `pkg/kubelet` and `pkg/controller/nodelifecycle`, which are owned by SIG Node.)
+
+
 
 ## Comments Matter
 
@@ -590,7 +598,42 @@ at once to that file.
 * Can the file be improved further?
 * Does the trivial edit greatly improve the quality of the content?
 
-## Fixing linter issues
+## Large or Automatic Edits
+
+Some tools make it very easy to create large and/or automatic Pull Requests, for example:
+- global search/replace
+- linters which automatically correct issues (see also next section)
+- AI tools (large language models, assistants, etc) which generate code or documentation
+
+To make it easier for reviewers to handle such Pull Requests, please explain
+how it was generated in the "Special notes for your reviewer" section of the
+Pull Request description. Reviewers may then be able to reproduce those steps
+(search/replace, linters) or can start the review with the right expectations
+(AI tools). Also consider the section about [splitting up Pull
+Requests](#dont-open-pull-requests-that-span-the-whole-repository) above.
+
+Even with such tools it is still your responsibility as submitter of a Pull
+Request to ensure that the change is correct (to the best of your knowledge),
+and that making the change improves the project enough to justify the cost that
+is needed to review and merge the Pull Request (see previous section). If
+unsure, create a Draft Pull Request and ask for guidance.
+
+Please understand that reviewers may decide to close a Pull Request with a
+reference to this documentation if they come to the conclusion that the
+difficulty of properly reviewing the Pull Request outweighs the benefit that
+the Pull Request provides.
+
+## AI Guidance
+
+Using AI tools to help write your PR is acceptable, but as the author, you are responsible for understanding every change. 
+Do not leave the first review of AI generated changes to the reviewers, verify the changes (code review, testing, etc.) before submitting your PR.
+Reviewers may ask questions about your AI-assisted code, and if you cannot explain why a change was made, the PR will be closed.
+When responding to review comments, please do so without relying on AI tools. Reviewers want to engage directly with you, not with generated responses.
+If you used AI tools in preparing your PR, please disclose this in the "Special notes for your reviewer" section.
+All contributions must follow the [contributions policies](/contributors/guide/contributing.md) and use commit messages that align with [the policy](#commit-message-guidelines). 
+[Large AI generated](#large-or-automatic-edits) PRs and AI generated commit messages are discouraged.
+
+## Fixing Linter Issues
 
 Kubernetes has a set of linter checks. Some of those must pass in the entire
 code base, some must pass in new or modified code, and some are merely hints

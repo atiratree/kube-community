@@ -46,7 +46,8 @@ The Chairs of the SIG run operations and processes governing the SIG.
 The Technical Leads of the SIG establish new subprojects, decommission existing
 subprojects, and resolve cross-subproject technical issues and decisions.
 
-* Kat Cosgrove (**[@katcosgrove](https://github.com/katcosgrove)**), Dell
+* Dipesh Rawat (**[@dipesh-rawat](https://github.com/dipesh-rawat)**), IBM
+* Kat Cosgrove (**[@katcosgrove](https://github.com/katcosgrove)**), Minimus
 * Xander Grzywinski (**[@salaxander](https://github.com/salaxander)**), Independent
 * Qiming Teng (**[@tengqm](https://github.com/tengqm)**), Sangfor Technologies
 
@@ -85,7 +86,7 @@ subprojects, and resolve cross-subproject technical issues and decisions.
     - [@kubernetes/sig-docs-ru-owners](https://github.com/orgs/kubernetes/teams/sig-docs-ru-owners) - Russian language content
     - [@kubernetes/sig-docs-uk-owners](https://github.com/orgs/kubernetes/teams/sig-docs-uk-owners) - Ukrainian language content
     - [@kubernetes/sig-docs-zh-owners](https://github.com/orgs/kubernetes/teams/sig-docs-zh-owners) - Chinese language content
-- Steering Committee Liaison: Stephen Augustus (**[@justaugustus](https://github.com/justaugustus)**)
+- Steering Committee Liaison: Kat Cosgrove (**[@katcosgrove](https://github.com/katcosgrove)**)
 
 ## Subprojects
 

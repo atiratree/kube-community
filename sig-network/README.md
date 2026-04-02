@@ -13,20 +13,24 @@ Covers networking in Kubernetes.
 The [charter](charter.md) defines the scope and governance of the Network Special Interest Group.
 
 ## Meetings
-*Joining the [mailing list](https://groups.google.com/forum/#!forum/kubernetes-sig-network) for the group will typically add invites for the following meetings to your calendar.*
+*Joining the [mailing list](https://groups.google.com/a/kubernetes.io/g/sig-network) for the group will typically add invites for the following meetings to your calendar.*
 * Gateway API Meeting (Americas): [Mondays at 15:00 PT (Pacific Time)](https://zoom.us/j/441530404) (weekly). [Convert to your timezone](http://www.thetimezoneconverter.com/?t=15%3A00&tz=PT%20%28Pacific%20Time%29).
   * [Meeting notes and Agenda](https://docs.google.com/document/d/1eg-YjOHaQ7UD28htdNxBR3zufebozXKyI28cl2E11tU/edit).
-* Gateway API Meeting (Europe): [Tuesday (starting September 10th 2024)s at 08:00 PT (Pacific Time)](https://zoom.us/j/441530404) (monthly). [Convert to your timezone](http://www.thetimezoneconverter.com/?t=08%3A00&tz=PT%20%28Pacific%20Time%29).
+* Gateway API Meeting (Europe): [Tuesday (starting September 10th 2024)s at 08:00 PT (Pacific Time)](https://zoom.us/j/441530404) (bi-weekly). [Convert to your timezone](http://www.thetimezoneconverter.com/?t=08%3A00&tz=PT%20%28Pacific%20Time%29).
   * [Meeting notes and Agenda](https://docs.google.com/document/d/1eg-YjOHaQ7UD28htdNxBR3zufebozXKyI28cl2E11tU/edit).
+* Ingate Meeting: [Fridays at 06:00 PT (Pacific Time)](https://zoom.us/j/94625479998) (biweekly). [Convert to your timezone](http://www.thetimezoneconverter.com/?t=06%3A00&tz=PT%20%28Pacific%20Time%29).
+  * [Meeting notes and Agenda](https://docs.google.com/document/d/1KqMxFbxz4QO5bYCFfihyZwPVZTtTtzcQs3Nt2-JQaAA/edit).
 * Network Policy API Meeting: [Tuesdays at 9:00 PT (Pacific Time)](https://zoom.us/j/96264742248) (bi-weekly). [Convert to your timezone](http://www.thetimezoneconverter.com/?t=9%3A00&tz=PT%20%28Pacific%20Time%29).
   * [Meeting notes and Agenda](https://docs.google.com/document/d/1AtWQy2fNa4qXRag9cCp5_HsefD7bxKe3ea2RPn8jnSs).
-* SIG Network Ingress NGINX Meeting: [Thursdays at 8:00 PT (Pacific Time)](https://zoom.us/j/98377891310) (biweekly). [Convert to your timezone](http://www.thetimezoneconverter.com/?t=8%3A00&tz=PT%20%28Pacific%20Time%29).
+* SIG Network InGate Meeting: [Fridays at 6:00 PT (Pacific Time)](https://zoom.us/j/94625479998) (monthly). [Convert to your timezone](http://www.thetimezoneconverter.com/?t=6%3A00&tz=PT%20%28Pacific%20Time%29).
+  * [Meeting notes and Agenda](https://docs.google.com/document/d/1KqMxFbxz4QO5bYCFfihyZwPVZTtTtzcQs3Nt2-JQaAA/edit).
+* SIG Network Ingress NGINX Meeting: [Thursdays at 8:00 PT (Pacific Time)](https://zoom.us/j/98377891310) (monthly). [Convert to your timezone](http://www.thetimezoneconverter.com/?t=8%3A00&tz=PT%20%28Pacific%20Time%29).
   * [Meeting notes and Agenda](https://docs.google.com/document/d/1DKlpcV6DAW0DsBrzh-OLkZvJQmABCVfRIRWBWjc4zOs/edit).
   * [Meeting recordings](https://www.youtube.com/watch?v=VkbEihIb7tA&list=PL69nYSiGNLP2Rqe8T4mDnyHqDZ4VYPY1X).
 * SIG Network Meeting: [Thursdays at 09:00 PT (Pacific Time)](https://zoom.us/j/361123509) (biweekly). [Convert to your timezone](http://www.thetimezoneconverter.com/?t=09%3A00&tz=PT%20%28Pacific%20Time%29).
   * [Meeting notes and Agenda](https://docs.google.com/document/d/1_w77-zG_Xj0zYvEMfQZTQ-wPP4kXkpGD8smVtW_qqWM/edit).
   * [Meeting recordings](https://www.youtube.com/watch?v=phCA5-vWkVM&list=PL69nYSiGNLP2E8vmnqo5MwPOY25sDWIxb).
-* SIG Network Multi-Network Meeting: [Wednesdays at 08:00 PT (Pacific Time)](https://zoom.us/j/95680858961?pwd=M1c2TTdMZHpMUUtIYXRpbjRobkNJZz09) (weekly). [Convert to your timezone](http://www.thetimezoneconverter.com/?t=08%3A00&tz=PT%20%28Pacific%20Time%29).
+* SIG Network Multi-Network Meeting: [Tuesdays at 06:00 PT (Pacific Time)](https://zoom.us/j/95680858961?pwd=M1c2TTdMZHpMUUtIYXRpbjRobkNJZz09) (biweekly starting Tuesday Oct 28, 2025). [Convert to your timezone](http://www.thetimezoneconverter.com/?t=06%3A00&tz=PT%20%28Pacific%20Time%29).
   * [Meeting notes and Agenda](https://docs.google.com/document/d/1pe_0aOsI35BEsQJ-FhFH9Z_pWQcU2uqwAnOx2NIx6OY/edit).
   * [Meeting recordings](https://www.youtube.com/watch?v=phCA5-vWkVM&list=PL69nYSiGNLP2E8vmnqo5MwPOY25sDWIxb).
 
@@ -35,9 +39,9 @@ The [charter](charter.md) defines the scope and governance of the Network Specia
 ### Chairs
 The Chairs of the SIG run operations and processes governing the SIG.
 
+* Bowei Du (**[@bowei](https://github.com/bowei)**), Google
 * Michael Zappa (**[@mikezappa87](https://github.com/mikezappa87)**), Microsoft
 * Shane Utt (**[@shaneutt](https://github.com/shaneutt)**), Red Hat
-* Tim Hockin (**[@thockin](https://github.com/thockin)**), Google
 
 ### Technical Leads
 The Technical Leads of the SIG establish new subprojects, decommission existing
@@ -54,7 +58,7 @@ subprojects, and resolve cross-subproject technical issues and decisions.
 
 ## Contact
 - Slack: [#sig-network](https://kubernetes.slack.com/messages/sig-network)
-- [Mailing list](https://groups.google.com/forum/#!forum/kubernetes-sig-network)
+- [Mailing list](https://groups.google.com/a/kubernetes.io/g/sig-network)
 - [Open Community Issues/PRs](https://github.com/kubernetes/community/labels/sig%2Fnetwork)
 - GitHub Teams:
     - [@kubernetes/sig-network-api-reviews](https://github.com/orgs/kubernetes/teams/sig-network-api-reviews) - API Changes and Reviews
@@ -69,8 +73,9 @@ subprojects, and resolve cross-subproject technical issues and decisions.
 ## Working Groups
 
 The following [working groups][working-group-definition] are sponsored by sig-network:
+* [WG AI Gateway](/wg-ai-gateway)
 * [WG Device Management](/wg-device-management)
-* [WG Policy](/wg-policy)
+* [WG Node Lifecycle](/wg-node-lifecycle)
 * [WG Serving](/wg-serving)
 * [WG Structured Logging](/wg-structured-logging)
 
@@ -91,14 +96,13 @@ The following [subprojects][subproject-definition] are owned by sig-network:
   - Slack: [#external-dns](https://kubernetes.slack.com/messages/external-dns)
 ### gateway-api
 - **Leads:**
-  - Mattia Lavacca (**[@mlavacca](https://github.com/mlavacca)**), Kong
+  - Ricardo Katz (**[@rikatz](https://github.com/rikatz)**), Red Hat
   - Rob Scott (**[@robscott](https://github.com/robscott)**), Google
-  - Shane Utt (**[@shaneutt](https://github.com/shaneutt)**), Red Hat
   - Nick Young (**[@youngnick](https://github.com/youngnick)**), Isovalent
 - **Owners:**
-  - [kubernetes-sigs/blixt](https://github.com/kubernetes-sigs/blixt/blob/main/OWNERS)
   - [kubernetes-sigs/gateway-api](https://github.com/kubernetes-sigs/gateway-api/blob/master/OWNERS)
   - [kubernetes-sigs/gwctl](https://github.com/kubernetes-sigs/gwctl/blob/main/OWNERS)
+  - [kubernetes-sigs/ingate/heads/main](https://github.com/kubernetes-sigs/ingate/blob/refs/heads/main/OWNERS)
   - [kubernetes-sigs/ingress2gateway](https://github.com/kubernetes-sigs/ingress2gateway/blob/main/OWNERS)
   - [kubernetes/kubernetes/pkg/controller/endpoint](https://github.com/kubernetes/kubernetes/blob/master/pkg/controller/endpoint/OWNERS)
   - [kubernetes/kubernetes/pkg/proxy](https://github.com/kubernetes/kubernetes/blob/master/pkg/proxy/OWNERS)
@@ -109,6 +113,8 @@ The following [subprojects][subproject-definition] are owned by sig-network:
 Gateway API Inference Extension
 - **Owners:**
   - [kubernetes-sigs/gateway-api-inference-extension](https://github.com/kubernetes-sigs/gateway-api-inference-extension/blob/main/OWNERS)
+- **Contact:**
+  - Slack: [#gateway-api-inference-extension](https://kubernetes.slack.com/messages/gateway-api-inference-extension)
 ### ingate
 - **Owners:**
   - [kubernetes-sigs/ingate/heads/main](https://github.com/kubernetes-sigs/ingate/blob/refs/heads/main/OWNERS)
@@ -120,14 +126,25 @@ Gateway API Inference Extension
 ### iptables-wrappers
 - **Owners:**
   - [kubernetes-sigs/iptables-wrappers](https://github.com/kubernetes-sigs/iptables-wrappers/blob/master/OWNERS)
+### kindnet
+- **Owners:**
+  - [kubernetes-sigs/kindnet](https://github.com/kubernetes-sigs/kindnet/blob/main/OWNERS)
 ### knftables
 - **Owners:**
   - [kubernetes-sigs/knftables](https://github.com/kubernetes-sigs/knftables/blob/master/OWNERS)
+### kube-agentic-networking
+- **Owners:**
+  - [kubernetes-sigs/kube-agentic-networking](https://github.com/kubernetes-sigs/kube-agentic-networking/blob/main/OWNERS)
 ### kube-dns
 - **Owners:**
   - [kubernetes/dns](https://github.com/kubernetes/dns/blob/master/OWNERS)
+### kubernetes-network-drivers
+- **Owners:**
+  - [kubernetes-sigs/dranet](https://github.com/kubernetes-sigs/dranet/blob/main/OWNERS)
+  - [kubernetes-sigs/kubernetes-network-drivers](https://github.com/kubernetes-sigs/kubernetes-network-drivers/blob/main/OWNERS)
 ### multi-network
 - **Leads:**
+  - Lionel Jouin (**[@LionelJouin](https://github.com/LionelJouin)**), Red Hat
   - Maciej Skrocki (**[@mskrocki](https://github.com/mskrocki)**), Google
 - **Owners:**
   - [kubernetes-sigs/multi-network-api](https://github.com/kubernetes-sigs/multi-network-api/blob/main/OWNERS)
@@ -136,12 +153,13 @@ Gateway API Inference Extension
   - Slack: [#sig-network-multi-network](https://kubernetes.slack.com/messages/sig-network-multi-network)
 ### network-policy
 - **Leads:**
-  - Andrew Stoycos (**[@astoycos](https://github.com/astoycos)**)
   - Dan Winship (**[@danwinship](https://github.com/danwinship)**), Red Hat
-  - Yang Ding (**[@dyanngg](https://github.com/dyanngg)**), VMWare
+  - Nadia Pinaeva (**[@npinaeva](https://github.com/npinaeva)**), NVIDIA
+  - Surya Seetharaman (**[@tssurya](https://github.com/tssurya)**), Red Hat
 - **Owners:**
   - [kubernetes-sigs/kube-network-policies](https://github.com/kubernetes-sigs/kube-network-policies/blob/master/OWNERS)
   - [kubernetes-sigs/network-policy-api](https://github.com/kubernetes-sigs/network-policy-api/blob/master/OWNERS)
+  - [kubernetes-sigs/network-policy-finalizer](https://github.com/kubernetes-sigs/network-policy-finalizer/blob/main/OWNERS)
   - [kubernetes/api/networking](https://github.com/kubernetes/api/blob/master/networking/OWNERS)
 - **Contact:**
   - Slack: [#sig-network-policy-api](https://kubernetes.slack.com/messages/sig-network-policy-api)
@@ -154,6 +172,10 @@ Gateway API Inference Extension
   - [kubernetes-sigs/ip-masq-agent](https://github.com/kubernetes-sigs/ip-masq-agent/blob/master/OWNERS)
   - [kubernetes-sigs/nat64](https://github.com/kubernetes-sigs/nat64/blob/main/OWNERS)
   - [kubernetes/kubernetes/pkg/kubelet/network](https://github.com/kubernetes/kubernetes/blob/master/pkg/kubelet/network/OWNERS)
+### wg-ai-gateway
+Proposals and discussions for the AI Gateway Working Group
+- **Owners:**
+  - [kubernetes-sigs/wg-ai-gateway](https://github.com/kubernetes-sigs/wg-ai-gateway/blob/main/OWNERS)
 
 [subproject-definition]: https://github.com/kubernetes/community/blob/master/governance.md#subprojects
 [working-group-definition]: https://github.com/kubernetes/community/blob/master/governance.md#working-groups
@@ -181,7 +203,7 @@ Most of these additional responsibilities relate to communication about their pr
 [Kubernetes Slack]: https://kubernetes.slack.com
 [Zoom]: https://zoom.us
 [SIG Network Calendar]: https://github.com/kubernetes/community/tree/master/sig-network#meetings
-[SIG Network Mailing List]: https://groups.google.com/g/kubernetes-sig-network
+[SIG Network Mailing List]: https://groups.google.com/a/kubernetes.io/g/sig-network
 
 ## Areas of Responsibility
 
@@ -220,5 +242,20 @@ remains important prior art for any future attempts to revise kube-proxy.
 
 [kpng]: https://github.com/kubernetes-sigs/kpng
 [kube-proxy]: https://kubernetes.io/docs/reference/command-line-tools-reference/kube-proxy/
+
+### Blixt
+
+[Blixt] was a Kubernetes L4 load-balancer that started in the early 2020's at a
+time when eBPF technology was a huge buzz for Kubernetes, and members of the
+Kubernetes SIG Network community wanted to experiment with and explore the
+technology on K8s. The project operated primarily as an experimental sandbox.
+
+We had a lot of fun working on this while it was active. It was great to create
+the first official Kubernetes project in [Rust], and experimenting with eBPF in
+its nascence was exciting. All things must come to an end however. Thank you to
+all contributors!
+
+[Blixt]:https://github.com/kubernetes-sigs/blixt
+[Rust]:https://github.com/rust-lang/
 
 <!-- END CUSTOM CONTENT -->

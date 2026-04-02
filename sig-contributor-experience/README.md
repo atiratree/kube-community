@@ -14,7 +14,7 @@ The [charter](charter.md) defines the scope and governance of the Contributor Ex
 
 ## Meetings
 *Joining the [mailing list](https://groups.google.com/forum/#!forum/kubernetes-sig-contribex) for the group will typically add invites for the following meetings to your calendar.*
-* Regular SIG Meeting: [Wednesdays at 9:00 PT (Pacific Time)](https://zoom.us/j/397264241?pwd=bHNnZVArNFdPaWVJMmttdko0Sktudz09) (Biweekly). [Convert to your timezone](http://www.thetimezoneconverter.com/?t=9%3A00&tz=PT%20%28Pacific%20Time%29).
+* Regular SIG Meeting: [Wednesdays at 10:00 PT (Pacific Time)](https://zoom.us/j/397264241?pwd=bHNnZVArNFdPaWVJMmttdko0Sktudz09) (Biweekly). [Convert to your timezone](http://www.thetimezoneconverter.com/?t=10%3A00&tz=PT%20%28Pacific%20Time%29).
   * [Meeting notes and Agenda](https://docs.google.com/document/d/1CBz8qV_mD6rbDmTsMuosTOQGRXGhN3d8UrcULUI6Vkw/edit).
   * [Meeting recordings](https://www.youtube.com/playlist?list=PL69nYSiGNLP2x_48wbOPO0vXQgNTm_xxr).
 * Regular SIG Meeting (APAC/J/NZ timezone friendly): [Wednesdays at 7:30 UTC](https://zoom.us/j/397264241?pwd=bHNnZVArNFdPaWVJMmttdko0Sktudz09) (Biweekly, interleaved with the Regular SIG Meeting). [Convert to your timezone](http://www.thetimezoneconverter.com/?t=7%3A30&tz=UTC).
@@ -28,7 +28,7 @@ The Chairs of the SIG run operations and processes governing the SIG.
 
 * Kaslin Fields (**[@kaslin](https://github.com/kaslin)**), Google
 * Mario Fahlandt (**[@mfahlandt](https://github.com/mfahlandt)**), Kubermatic GmbH
-* Nabarun Pal (**[@palnabarun](https://github.com/palnabarun)**), VMware
+* Nabarun Pal (**[@palnabarun](https://github.com/palnabarun)**), Broadcom
 
 ### Technical Leads
 The Technical Leads of the SIG establish new subprojects, decommission existing
@@ -57,7 +57,7 @@ subprojects, and resolve cross-subproject technical issues and decisions.
     - [@kubernetes/sig-contributor-experience](https://github.com/orgs/kubernetes/teams/sig-contributor-experience) - General Discussion
     - [@kubernetes/sig-contributor-experience-leads](https://github.com/orgs/kubernetes/teams/sig-contributor-experience-leads) - Chairs and Technical Leads
     - [@kubernetes/sig-contributor-experience-pr-reviews](https://github.com/orgs/kubernetes/teams/sig-contributor-experience-pr-reviews) - PR Reviews
-- Steering Committee Liaison: Antonio Ojea (**[@aojea](https://github.com/aojea)**)
+- Steering Committee Liaison: Rita Zhang (**[@ritazh](https://github.com/ritazh)**)
 
 ## Subprojects
 
@@ -123,13 +123,8 @@ Manages and controls Github permissions, repos, and groups, including Org Member
 ### mentoring
 Oversees and develops programs for helping contributors ascend the contributor ladder, including the New Contributor Workshops, and other programs.
 - **Owners:**
-  - [kubernetes-sigs/contributor-katacoda](https://github.com/kubernetes-sigs/contributor-katacoda/blob/main/OWNERS)
   - [kubernetes-sigs/contributor-playground](https://github.com/kubernetes-sigs/contributor-playground/blob/master/OWNERS)
   - [kubernetes/community/mentoring](https://github.com/kubernetes/community/blob/master/mentoring/OWNERS)
-### sigs-github-actions
-Repository for GitHub actions and artifacts related to all sigs in Kubernetes.
-- **Owners:**
-  - [kubernetes-sigs/sigs-github-actions](https://github.com/kubernetes-sigs/sigs-github-actions/blob/main/OWNERS)
 ### slack-infra
 Creates and maintains tools and automation for Kubernetes Slack.
 - **Owners:**

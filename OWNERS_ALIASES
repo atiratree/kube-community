@@ -13,14 +13,17 @@ aliases:
     - dims
     - johnbelamaric
   sig-auth-leads:
+    - aramase
     - deads2k
     - enj
     - liggitt
-    - mikedanese
+    - micahhausler
     - ritazh
   sig-autoscaling-leads:
+    - adrianmoisey
     - gjtempleton
-    - maciekpytel
+    - jackfrancis
+    - towca
   sig-cli-leads:
     - ardaguclu
     - eddiezane
@@ -30,6 +33,7 @@ aliases:
     - bridgetkromhout
     - cheftako
     - elmiko
+    - joelspeed
   sig-cluster-lifecycle-leads:
     - fabriziopandini
     - justinsb
@@ -42,6 +46,7 @@ aliases:
     - mfahlandt
     - palnabarun
   sig-docs-leads:
+    - dipesh-rawat
     - divya-mohan0209
     - katcosgrove
     - natalisucks
@@ -50,18 +55,19 @@ aliases:
     - tengqm
   sig-etcd-leads:
     - ahrtr
+    - ivanvc
     - jmhbnz
     - serathius
-    - wenjiaswe
+    - siyuanfoundation
   sig-instrumentation-leads:
     - dashpole
     - dgrisonnet
     - rexagod
     - richabanker
   sig-k8s-infra-leads:
-    - BenTheElder
+    - GenPage
     - ameukam
-    - dims
+    - hakman
     - upodroid
     - xmudrii
   sig-multicluster-leads:
@@ -69,6 +75,7 @@ aliases:
     - skitt
   sig-network-leads:
     - aojea
+    - bowei
     - danwinship
     - mikezappa87
     - shaneutt
@@ -88,12 +95,13 @@ aliases:
     - saschagrunert
   sig-scalability-leads:
     - marseel
+    - mengqiy
     - shyamjvs
     - wojtek-t
   sig-scheduling-leads:
-    - Huang-Wei
-    - ahg-g
-    - alculquicondor
+    - dom4ha
+    - macsko
+    - sanposhiho
   sig-security-leads:
     - IanColdwater
     - cailyn-codes
@@ -112,19 +120,39 @@ aliases:
     - xmcqueen
   sig-ui-leads:
     - floreks
+    - joaquimrocha
     - maciaszczykm
     - shu-mutou
   sig-windows-leads:
     - aravindhp
     - claudiubelu
-    - jsturtevant
-    - knabben
     - marosset
+    - zylxjtu
+  wg-ai-conformance-leads:
+    - janetkuo
+    - mfahlandt
+    - ritazh
+    - terrytangyuan
+  wg-ai-gateway-leads:
+    - keithmattix
+    - kflynn
+    - kfswain
+    - nirrozenbaum
+    - shaneutt
+    - xunzhuo
+  wg-ai-integration-leads:
+    - ardaguclu
+    - rushmash91
+    - zvonkok
   wg-batch-leads:
     - kannon92
     - mwielgus
-    - soltysh
-    - swatisehgal
+    - tenzen-y
+  wg-checkpoint-restore-leads:
+    - adrianreber
+    - haircommander
+    - rst0git
+    - viktoriaas
   wg-data-protection-leads:
     - xing-yang
     - yuxiangqian
@@ -142,10 +170,10 @@ aliases:
     - jeremyrickard
     - liggitt
     - micahhausler
-  wg-policy-leads:
-    - JimBugwadia
-    - poonam-lamba
-    - sudermanjr
+  wg-node-lifecycle-leads:
+    - atiratree
+    - intUnderflow
+    - rthallisey
   wg-serving-leads:
     - ArangoGutierrez
     - Jeffwan
@@ -156,25 +184,28 @@ aliases:
     - pohly
   committee-code-of-conduct:
     - AnaMMedina21
+    - divya-mohan0209
     - endocrimes
-    - hlipsig
     - jeremyrickard
-    - salaxander
+    - stmcginnis
   committee-security-response:
     - SaranBalaji90
+    - Vyom-Yadav
     - cjcullen
     - cji
     - enj
     - joelsmith
     - micahhausler
+    - natherz97
+    - puerco
     - ritazh
     - tabbysable
   committee-steering:
     - BenTheElder
     - aojea
-    - justaugustus
+    - katcosgrove
     - pacoxu
-    - pohly
+    - ritazh
     - saschagrunert
     - soltysh
 ## BEGIN CUSTOM CONTENT

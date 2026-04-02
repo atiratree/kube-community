@@ -57,6 +57,7 @@ subprojects, and resolve cross-subproject technical issues and decisions.
 ## Working Groups
 
 The following [working groups][working-group-definition] are sponsored by sig-testing:
+* [WG AI Conformance](/wg-ai-conformance)
 * [WG LTS](/wg-lts)
 
 
@@ -73,11 +74,10 @@ Cloud provider for KIND clusters
 ### boskos
 Boskos is a resource manager service that handles different kinds of resources and transitions between different states. We use it on the Kubernetes project to manage pools of GCP projects for CI/CD.
 - **Leads:**
-  - Davanum Srinivas (**[@dims](https://github.com/dims)**), Amazon
+  - Davanum Srinivas (**[@dims](https://github.com/dims)**), NVIDIA
   - Mahamed Ali (**[@upodroid](https://github.com/upodroid)**), Cisco
 - **Owners:**
   - [kubernetes-sigs/boskos](https://github.com/kubernetes-sigs/boskos/blob/master/OWNERS)
-  - [kubernetes/test-infra/boskos](https://github.com/kubernetes/test-infra/blob/master/boskos/OWNERS)
 ### e2e-framework
 An experimental e2e testing framework for Kubernetes clusters.
 - **Owners:**
@@ -85,7 +85,7 @@ An experimental e2e testing framework for Kubernetes clusters.
 ### hydrophone
 Hydrophone is a lightweight Kubernetes conformance tests runner
 - **Leads:**
-  - Davanum Srinivas (**[@dims](https://github.com/dims)**), Amazon
+  - Davanum Srinivas (**[@dims](https://github.com/dims)**), NVIDIA
   - Ricky Sadowski (**[@rjsadow](https://github.com/rjsadow)**), ICR Team
 - **Owners:**
   - [kubernetes-sigs/hydrophone](https://github.com/kubernetes-sigs/hydrophone/blob/main/OWNERS)
@@ -115,6 +115,12 @@ Prow is a CI/CD system based on Kubernetes. See prow.k8s.io to see it in action 
   - [kubernetes-sigs/prow](https://github.com/kubernetes-sigs/prow/blob/main/OWNERS)
 - **Contact:**
   - Slack: [#prow](https://kubernetes.slack.com/messages/prow)
+### randfill
+Utility functions for filling types with randomized data (for kubernetes testing use).
+- **Leads:**
+  - Tim Hockin (**[@thockin](https://github.com/thockin)**), Google
+- **Owners:**
+  - [kubernetes-sigs/randfill](https://github.com/kubernetes-sigs/randfill/blob/main/OWNERS)
 ### sig-testing
 Home for SIG Testing discussion and documents.
 - **Owners:**

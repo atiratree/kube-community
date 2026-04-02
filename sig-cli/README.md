@@ -60,6 +60,13 @@ subprojects, and resolve cross-subproject technical issues and decisions.
     - [@kubernetes/sig-cli-test-failures](https://github.com/orgs/kubernetes/teams/sig-cli-test-failures) - Test Failures and Triage
 - Steering Committee Liaison: Paco Xu 徐俊杰 (**[@pacoxu](https://github.com/pacoxu)**)
 
+## Working Groups
+
+The following [working groups][working-group-definition] are sponsored by sig-cli:
+* [WG AI Integration](/wg-ai-integration)
+* [WG Node Lifecycle](/wg-node-lifecycle)
+
+
 ## Subprojects
 
 The following [subprojects][subproject-definition] are owned by sig-cli:
@@ -83,11 +90,6 @@ Plugin manager for kubectl.
 Centralized plugin index for krew.
 - **Owners:**
   - [kubernetes-sigs/krew-index](https://github.com/kubernetes-sigs/krew-index/blob/master/OWNERS)
-### krm-functions
-- **Owners:**
-  - [kubernetes-sigs/krm-functions-registry](https://github.com/kubernetes-sigs/krm-functions-registry/blob/main/OWNERS)
-- **Contact:**
-  - Slack: [#sig-cli-krm-functions](https://kubernetes.slack.com/messages/sig-cli-krm-functions)
 ### kubectl
 - **Owners:**
   - [kubernetes/kubectl](https://github.com/kubernetes/kubectl/blob/master/OWNERS)
@@ -98,10 +100,6 @@ schemas on client-side aiming for best parity with errors returned
 by server. Supports core resources, CRDs, CEL validations, and more!
 - **Owners:**
   - [kubernetes-sigs/kubectl-validate](https://github.com/kubernetes-sigs/kubectl-validate/blob/main/OWNERS)
-### kui
-Hybrid command-line/UI development experience for cloud-native development
-- **Owners:**
-  - [kubernetes-sigs/kui](https://github.com/kubernetes-sigs/kui/blob/master/OWNERS)
 ### kustomize
 - **Leads:**
   - Yugo Kobayashi (**[@koba1t](https://github.com/koba1t)**), LY Corporation

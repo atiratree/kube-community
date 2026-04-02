@@ -20,6 +20,7 @@ The [charter](charter.md) defines the scope and governance of the UI Special Int
 The Chairs of the SIG run operations and processes governing the SIG.
 
 * Sebastian Florek (**[@floreks](https://github.com/floreks)**), Plural
+* Joaquim Rocha (**[@joaquimrocha](https://github.com/joaquimrocha)**), Microsoft
 * Marcin Maciaszczyk (**[@maciaszczykm](https://github.com/maciaszczykm)**), Plural
 * Shu Muto (**[@shu-mutou](https://github.com/shu-mutou)**), NEC
 
@@ -40,6 +41,9 @@ The following [subprojects][subproject-definition] are owned by sig-ui:
 ### dashboard
 - **Owners:**
   - [kubernetes/dashboard](https://github.com/kubernetes/dashboard/blob/master/OWNERS)
+### headlamp
+- **Owners:**
+  - [kubernetes-sigs/headlamp/heads/main](https://github.com/kubernetes-sigs/headlamp/blob/refs/heads/main/OWNERS)
 
 [subproject-definition]: https://github.com/kubernetes/community/blob/master/governance.md#subprojects
 [working-group-definition]: https://github.com/kubernetes/community/blob/master/governance.md#working-groups

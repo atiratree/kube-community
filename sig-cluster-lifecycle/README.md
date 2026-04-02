@@ -24,7 +24,7 @@ The [charter](charter.md) defines the scope and governance of the Cluster Lifecy
 The Chairs of the SIG run operations and processes governing the SIG.
 
 * Justin Santa Barbara (**[@justinsb](https://github.com/justinsb)**), Google
-* Lubomir Ivanov (**[@neolit123](https://github.com/neolit123)**), VMware
+* Lubomir Ivanov (**[@neolit123](https://github.com/neolit123)**), Independent
 * Vince Prignano (**[@vincepri](https://github.com/vincepri)**), Red Hat
 
 ### Technical Leads
@@ -52,6 +52,7 @@ subprojects, and resolve cross-subproject technical issues and decisions.
 
 The following [working groups][working-group-definition] are sponsored by sig-cluster-lifecycle:
 * [WG LTS](/wg-lts)
+* [WG Node Lifecycle](/wg-node-lifecycle)
 * [WG etcd Operator](/wg-etcd-operator)
 
 
@@ -121,9 +122,9 @@ Cluster API infrastructure provider for Azure
   - Slack: [#cluster-api-azure](https://kubernetes.slack.com/messages/cluster-api-azure)
   - [Mailing List](https://groups.google.com/a/kubernetes.io/g/sig-cluster-lifecycle)
 - **Meetings:**
-  - Cluster API Provider Azure office hours: [Thursdays at 09:00 PT (Pacific Time)](https://zoom.us/j/566930821?pwd=N2JuRWljc3hGS3ZnVlBLTk42TFlzQT09) (weekly). [Convert to your timezone](http://www.thetimezoneconverter.com/?t=09%3A00&tz=PT%20%28Pacific%20Time%29).
+  - Cluster API Provider Azure office hours: [Thursdays at 09:00 PT (Pacific Time)](https://zoom.us/j/566930821?pwd=N2JuRWljc3hGS3ZnVlBLTk42TFlzQT09) (biweekly). [Convert to your timezone](http://www.thetimezoneconverter.com/?t=09%3A00&tz=PT%20%28Pacific%20Time%29).
     - [Meeting notes and Agenda](http://bit.ly/k8s-capz-agenda).
-    - [Meeting recordings](https://www.youtube.com/playlist?list=PL69nYSiGNLP29D0nYgAGWt1ZFqS9Z7lw4).
+    - [Meeting recordings](https://www.youtube.com/playlist?list=PLIK3KJ8dtXfJYiQJnORdPOQPK6lOl8TdD).
 ### cluster-api-provider-cloudstack
 Cluster API provider for Apache Cloudstack
 - **Owners:**
@@ -147,7 +148,7 @@ Cluster API infrastructure provider for GCP
   - Slack: [#cluster-api-gcp](https://kubernetes.slack.com/messages/cluster-api-gcp)
   - [Mailing List](https://groups.google.com/a/kubernetes.io/g/sig-cluster-lifecycle)
 - **Meetings:**
-  - Cluster API infrastructure provider for GCP: [Thursdays at 09:00 PT (Pacific Time)](https://zoom.us/j/96963829102?pwd=WjBZcmwvZFZsUU93aVZieUk1L3FnZz09) (every first Thursday of the month). [Convert to your timezone](http://www.thetimezoneconverter.com/?t=09%3A00&tz=PT%20%28Pacific%20Time%29).
+  - Cluster API infrastructure provider for GCP: [Thursdays at 05:00 PT (Pacific Time)](https://zoom.us/j/96963829102?pwd=WjBZcmwvZFZsUU93aVZieUk1L3FnZz09) (every first Thursday of the month). [Convert to your timezone](http://www.thetimezoneconverter.com/?t=05%3A00&tz=PT%20%28Pacific%20Time%29).
     - [Meeting notes and Agenda](https://docs.google.com/document/d/1l8B947Je79ZJX7zmKnJyMcOMIWjNidvp5FMTnPAY72I/).
     - [Meeting recordings](https://www.youtube.com/playlist?list=PL69nYSiGNLP29D0nYgAGWt1ZFqS9Z7lw4).
 ### cluster-api-provider-ibmcloud
@@ -188,13 +189,6 @@ Cluster API infrastructure provider for OpenStack
 - **Meetings:**
   - Cluster API Provider OpenStack Office Hours: [Wednesdays at 14:00 UTC](https://zoom.us/j/91405526408?pwd=bVBxempwVDBzejJGQlhSOGlXZnRxUT09) (alternate weeks, check agenda doc for last meeting). [Convert to your timezone](http://www.thetimezoneconverter.com/?t=14%3A00&tz=UTC).
     - [Meeting notes and Agenda](https://cluster-api-openstack.sigs.k8s.io/agenda).
-### cluster-api-provider-packet
-Cluster API infrastructure provider for Packet
-- **Owners:**
-  - [kubernetes-sigs/cluster-api-provider-packet](https://github.com/kubernetes-sigs/cluster-api-provider-packet/blob/master/OWNERS)
-- **Contact:**
-  - Slack: [#cluster-api-packet](https://kubernetes.slack.com/messages/cluster-api-packet)
-  - [Mailing List](https://groups.google.com/a/kubernetes.io/g/sig-cluster-lifecycle)
 ### cluster-api-provider-vsphere
 Cluster API infrastructure provider for vSphere
 - **Owners:**
@@ -215,7 +209,7 @@ A collection of cross-provider Kubernetes virtual machine image building utiliti
   - [Mailing List](https://groups.google.com/a/kubernetes.io/g/sig-cluster-lifecycle)
 - **Meetings:**
   - Image Builder office hours: [Mondays at 08:30 PT (Pacific Time)](https://zoom.us/j/807524571?pwd=WEFTeDJzeWU3bVFkcWQ0UEdZRkRCdz09) (biweekly). [Convert to your timezone](http://www.thetimezoneconverter.com/?t=08%3A30&tz=PT%20%28Pacific%20Time%29).
-    - [Meeting notes and Agenda](https://docs.google.com/document/d/1YIOD0Nnid_0h6rKlDxcbfJaoIRNO6mQd9Or5vKRNxaU/edit).
+    - [Meeting notes and Agenda](https://docs.google.com/document/d/100uv2GmlgWyLBVP65W6ABNJ_EqbvVYTYtTilCLbnVYI/edit).
     - [Meeting recordings](https://www.youtube.com/playlist?list=PL69nYSiGNLP29D0nYgAGWt1ZFqS9Z7lw4).
 ### kOps
 A tool for creating, destroying, upgrading and maintaining production-grade, highly available, Kubernetes cluster that also provisions infrastructure
@@ -261,6 +255,8 @@ A project that uses Ansible / Vagrant for deploying production ready clusters on
 Implements a local Kubernetes cluster for application development on macOS, Linux, and Windows
 - **Owners:**
   - [kubernetes-sigs/minikube-gui](https://github.com/kubernetes-sigs/minikube-gui/blob/main/OWNERS)
+  - [kubernetes-sigs/minikube-os](https://github.com/kubernetes-sigs/minikube-os/blob/main/OWNERS)
+  - [kubernetes-sigs/minikube-preloads](https://github.com/kubernetes-sigs/minikube-preloads/blob/main/OWNERS)
   - [kubernetes/minikube](https://github.com/kubernetes/minikube/blob/master/OWNERS)
 - **Contact:**
   - Slack: [#minikube](https://kubernetes.slack.com/messages/minikube)

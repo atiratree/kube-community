@@ -98,7 +98,7 @@ Corporate CLA](https://github.com/cncf/cla/blob/master/corporate-cla.pdf)
    * If (a) contributor(s) have not signed the CLA and could not be reached, a
      NOTICE file should be added referencing section 7 of the CLA with a list of
 the developers who could not be reached
-   * Licenses of dependencies are acceptable; please review the [allowed-third-party-license-policy.md](https://github.com/cncf/foundation/blob/main/allowed-third-party-license-policy.md)
+   * Licenses of dependencies are acceptable; please review the [allowed-third-party-license-policy.md](https://github.com/cncf/foundation/blob/main/policies-guidance/allowed-third-party-license-policy.md)
      and [exceptions](https://github.com/cncf/foundation/tree/main/license-exceptions).
      If your dependencies are not covered, then please open a `License Exception Request` issue in
      [cncf/foundation](https://github.com/cncf/foundation/issues) repository.
@@ -114,6 +114,14 @@ the developers who could not be reached
 Note that copyright notices should only be modified or removed by the people or
 organizations named in the notice. See [the FAQ below](#faq) for more information
 regarding copyrights and copyright notices.
+
+#### Additional requirements for forking external repositories
+
+In addition to all standard requirements for donated repositories:
+
+* When forking an external repository into the Kubernetes GitHub organization (particularly if the repository owners cannot be contacted), a NOTICE file must be included listing all existing contributors to the external repository. An example of the NOTICE file is [here](https://github.com/kubernetes-sigs/randfill/blob/ba7cb247249023527ba6c4d05aeeb8f8faf22c74/NOTICE).
+
+This is to ensures proper attribution and compliance with the CLA.
 
 ## Core Repositories
 

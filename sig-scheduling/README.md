@@ -13,17 +13,17 @@ SIG Scheduling is responsible for the components that make Pod placement decisio
 The [charter](charter.md) defines the scope and governance of the Scheduling Special Interest Group.
 
 ## Meetings
-*Joining the [mailing list](https://groups.google.com/forum/#!forum/kubernetes-sig-scheduling) for the group will typically add invites for the following meetings to your calendar.*
-* biweekly meeting (Asia & Europe): [Tuesdays at 9:00 UTC](https://zoom.us/j/841218129) (biweekly starting Tuesday Feb 11, 2025). [Convert to your timezone](http://www.thetimezoneconverter.com/?t=9%3A00&tz=UTC).
+*Joining the [mailing list](https://groups.google.com/a/kubernetes.io/g/sig-scheduling) for the group will typically add invites for the following meetings to your calendar.*
+* biweekly meeting (Asia & Europe): [Tuesdays at 9:00 CET (Central European Time)](https://zoom.us/j/841218129?pwd=MzZkTGREcmpISWhhMjlqTHRqRERvQT09) (biweekly starting Tuesday Feb 11, 2025). [Convert to your timezone](http://www.thetimezoneconverter.com/?t=9%3A00&tz=CET%20%28Central%20European%20Time%29).
   * [Meeting notes and Agenda](https://docs.google.com/document/d/13mwye7nvrmV11q9_Eg77z-1w3X7Q1GTbslpml4J7F3A/edit).
   * [Meeting recordings](https://www.youtube.com/watch?v=PweKj6SU7UA&list=PL69nYSiGNLP2vwzcCOhxrL3JVBc-eaJWI).
-* biweekly meeting (NA & Europe): [Thursdays at 17:00 UTC](https://zoom.us/j/841218129) (biweekly starting Thursday June 7, 2018). [Convert to your timezone](http://www.thetimezoneconverter.com/?t=17%3A00&tz=UTC).
+* biweekly meeting (NA & Europe): [Thursdays at 10:00 PT (Pacific Time)](https://zoom.us/j/841218129?pwd=MzZkTGREcmpISWhhMjlqTHRqRERvQT09) (biweekly starting Thursday June 7, 2018). [Convert to your timezone](http://www.thetimezoneconverter.com/?t=10%3A00&tz=PT%20%28Pacific%20Time%29).
   * [Meeting notes and Agenda](https://docs.google.com/document/d/13mwye7nvrmV11q9_Eg77z-1w3X7Q1GTbslpml4J7F3A/edit).
   * [Meeting recordings](https://www.youtube.com/watch?v=PweKj6SU7UA&list=PL69nYSiGNLP2vwzcCOhxrL3JVBc-eaJWI).
-* descheduler biweekly meeting Europe time: [Tuesdays at 14:30 CET](https://zoom.us/j/841218129) (biweekly starting Tuesday Feb 27, 2024). [Convert to your timezone](http://www.thetimezoneconverter.com/?t=14%3A30&tz=CET).
+* descheduler biweekly meeting Europe time: [Tuesdays at 14:30 CET (Central European Time)](https://zoom.us/j/841218129?pwd=MzZkTGREcmpISWhhMjlqTHRqRERvQT09) (biweekly starting Tuesday Feb 27, 2024). [Convert to your timezone](http://www.thetimezoneconverter.com/?t=14%3A30&tz=CET%20%28Central%20European%20Time%29).
   * [Meeting notes and Agenda](https://docs.google.com/document/d/1Ang5shAFxuylO2RXMFGO7uxSe-IX3Y3PxoKIn1yPIEQ).
   * [Meeting recordings](https://youtube.com/playlist?list=PLEafaZMk8MYYqoSncOkL8uutIcTsUQE_g).
-* descheduler biweekly meeting North America time: [Tuesdays at 19:30 CET](https://zoom.us/j/841218129) (biweekly starting Tuesday March 12, 2024). [Convert to your timezone](http://www.thetimezoneconverter.com/?t=19%3A30&tz=CET).
+* descheduler biweekly meeting North America time: [Tuesdays at 19:30 CET (Central European Time)](https://zoom.us/j/841218129?pwd=MzZkTGREcmpISWhhMjlqTHRqRERvQT09) (biweekly starting Tuesday March 12, 2024). [Convert to your timezone](http://www.thetimezoneconverter.com/?t=19%3A30&tz=CET%20%28Central%20European%20Time%29).
   * [Meeting notes and Agenda](https://docs.google.com/document/d/1Ang5shAFxuylO2RXMFGO7uxSe-IX3Y3PxoKIn1yPIEQ).
   * [Meeting recordings](https://youtube.com/playlist?list=PLEafaZMk8MYYqoSncOkL8uutIcTsUQE_g).
 
@@ -32,42 +32,40 @@ The [charter](charter.md) defines the scope and governance of the Scheduling Spe
 ### Chairs
 The Chairs of the SIG run operations and processes governing the SIG.
 
-* Wei Huang (**[@Huang-Wei](https://github.com/Huang-Wei)**), Apple
-* Abdullah Gharaibeh (**[@ahg-g](https://github.com/ahg-g)**), Google
+* Maciej Skoczeń (**[@macsko](https://github.com/macsko)**), Google
+* Kensei Nakada (**[@sanposhiho](https://github.com/sanposhiho)**), Independent
 
 ### Technical Leads
 The Technical Leads of the SIG establish new subprojects, decommission existing
 subprojects, and resolve cross-subproject technical issues and decisions.
 
-* Wei Huang (**[@Huang-Wei](https://github.com/Huang-Wei)**), Apple
-* Abdullah Gharaibeh (**[@ahg-g](https://github.com/ahg-g)**), Google
-* Aldo Culquicondor (**[@alculquicondor](https://github.com/alculquicondor)**), Google
+* Dominik Marciński (**[@dom4ha](https://github.com/dom4ha)**), Google
+* Kensei Nakada (**[@sanposhiho](https://github.com/sanposhiho)**), Independent
 
 ## Emeritus Leads
 
+* Wei Huang (**[@Huang-Wei](https://github.com/Huang-Wei)**)
+* Abdullah Gharaibeh (**[@ahg-g](https://github.com/ahg-g)**)
+* Aldo Culquicondor (**[@alculquicondor](https://github.com/alculquicondor)**)
 * Bobby (Babak) Salamat (**[@bsalamat](https://github.com/bsalamat)**)
 * Klaus Ma (**[@k82cn](https://github.com/k82cn)**)
 
 ## Contact
 - Slack: [#sig-scheduling](https://kubernetes.slack.com/messages/sig-scheduling)
-- [Mailing list](https://groups.google.com/forum/#!forum/kubernetes-sig-scheduling)
+- [Mailing list](https://groups.google.com/a/kubernetes.io/g/sig-scheduling)
 - [Open Community Issues/PRs](https://github.com/kubernetes/community/labels/sig%2Fscheduling)
 - GitHub Teams:
-    - [@kubernetes/sig-scheduling-api-reviews](https://github.com/orgs/kubernetes/teams/sig-scheduling-api-reviews) - API Changes and Reviews
-    - [@kubernetes/sig-scheduling-bugs](https://github.com/orgs/kubernetes/teams/sig-scheduling-bugs) - Bug Triage and Troubleshooting
-    - [@kubernetes/sig-scheduling-feature-requests](https://github.com/orgs/kubernetes/teams/sig-scheduling-feature-requests) - Feature Requests
+    - [@kubernetes/sig-scheduling-leads](https://github.com/orgs/kubernetes/teams/sig-scheduling-leads) - SIG Scheduling leads
     - [@kubernetes/sig-scheduling-misc](https://github.com/orgs/kubernetes/teams/sig-scheduling-misc) - General Discussion
-    - [@kubernetes/sig-scheduling-pr-reviews](https://github.com/orgs/kubernetes/teams/sig-scheduling-pr-reviews) - PR Reviews
-    - [@kubernetes/sig-scheduling-proposals](https://github.com/orgs/kubernetes/teams/sig-scheduling-proposals) - Design Proposals
-    - [@kubernetes/sig-scheduling-test-failures](https://github.com/orgs/kubernetes/teams/sig-scheduling-test-failures) - Test Failures and Triage
 - Steering Committee Liaison: Benjamin Elder (**[@BenTheElder](https://github.com/BenTheElder)**)
 
 ## Working Groups
 
 The following [working groups][working-group-definition] are sponsored by sig-scheduling:
 * [WG Batch](/wg-batch)
+* [WG Checkpoint Restore](/wg-checkpoint-restore)
 * [WG Device Management](/wg-device-management)
-* [WG Policy](/wg-policy)
+* [WG Node Lifecycle](/wg-node-lifecycle)
 * [WG Serving](/wg-serving)
 * [WG Structured Logging](/wg-structured-logging)
 
@@ -81,6 +79,9 @@ The following [subprojects][subproject-definition] are owned by sig-scheduling:
 ### descheduler
 - **Owners:**
   - [kubernetes-sigs/descheduler](https://github.com/kubernetes-sigs/descheduler/blob/master/OWNERS)
+### dra-driver-topology
+- **Owners:**
+  - [kubernetes-sigs/dra-driver-topology](https://github.com/kubernetes-sigs/dra-driver-topology/blob/main/OWNERS)
 ### kube-scheduler-simulator
 - **Owners:**
   - [kubernetes-sigs/kube-scheduler-simulator](https://github.com/kubernetes-sigs/kube-scheduler-simulator/blob/master/OWNERS)
